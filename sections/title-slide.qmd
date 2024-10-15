@@ -11,11 +11,11 @@
 ::: {.column .information width="68%"}
 
 ::: {.title}
-Quarto template
+Sharing data and more
 :::
 
 ::: {.subtitle}
-HTML presentation w/ RevealJS framework
+Shiny apps, websites and R packages
 :::
 
 ::: {.date}
