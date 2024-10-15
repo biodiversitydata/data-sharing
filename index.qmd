@@ -27,9 +27,9 @@ engine: knitr
 ```
 -->
 
-<!-- Insert section 'Quarto basics' -->
+<!-- Insert section 'Introduction' -->
 
 ```{r}
-#| child: "sections/quarto-basics.qmd"
+#| child: "sections/introduction.qmd"
 ```
 
