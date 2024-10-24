@@ -21,15 +21,31 @@ engine: knitr
 
 <!-- Insert section 'Table of contents' -->
 
-<!--
 ```{r}
 #| child: "sections/table-of-contents.qmd"
 ```
--->
 
 <!-- Insert section 'Introduction' -->
 
 ```{r}
 #| child: "sections/introduction.qmd"
+```
+
+<!-- Insert section 'R package' -->
+
+```{r}
+#| child: "sections/r-package.qmd"
+```
+
+<!-- Insert section 'Shiny App' -->
+
+```{r}
+#| child: "sections/shiny-app.qmd"
+```
+
+<!-- Insert section 'Others' -->
+
+```{r}
+#| child: "sections/others.qmd"
 ```
 

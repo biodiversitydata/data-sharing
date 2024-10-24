@@ -8,27 +8,41 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 
 :::: { .columns }
 
 ::: { .column .center width="33%"}
-{{< fa code size=2x >}}
-<br>
-Section 1
+{{< fa right-to-bracket size=2x >}}
+Introduction
 :::
 
 ::: { .column .center width="33%"}
-{{< fa brands github size=2x >}}
-<br>
-Section 2
+{{< fa brands r-project size=2x >}}
+R package
 :::
 
 ::: { .column .center width="33%"}
-{{< fa book size=2x >}}
-<br>
-Resources
+{{< fa globe size=2x >}}
+Shiny App
+:::
+
+::::
+
+
+<br><br>
+
+
+:::: { .columns }
+
+::: { .column .center width="33%"}
+:::
+
+::: { .column .center width="33%"}
+{{< fa expand size=2x >}}
+Others
+:::
+
+::: { .column .center width="33%"}
 :::
 
 ::::
