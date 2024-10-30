@@ -11,11 +11,11 @@
 ::: {.column .information width="68%"}
 
 ::: {.title}
-Sharing data and more
+Sharing code & tools
 :::
 
 ::: {.subtitle}
-Shiny apps, websites and R packages
+Research compendium, R package, Shiny App & website
 :::
 
 ::: {.date}

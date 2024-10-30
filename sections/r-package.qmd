@@ -1,7 +1,539 @@
-# {{< fa brands r-project size=1x >}} &nbsp;&nbsp;R package
+# {{< fa cube size=1x >}} &nbsp;&nbsp;R package
 
 
 
-## R package
+## What's an R Package?
 
-Coming soon...
+> In {{< fa brands r-project >}} &nbsp; the fundamental unit of shareable code is the package. A package bundles together `code`, `data`, `documentation`, and `tests`, and is easy to share with others.
+
+:::{.citation}
+Hadley Wickham - R packages (1^st^ ed.)
+:::
+
+
+. . .
+
+<br/>
+
+An {{< fa brands r-project >}} &nbsp; package:
+
+- is a collection of `well-documented functions`
+- makes your work more `reproducible`
+- makes your code `useful` for you and for others
+
+
+. . .
+
+<br/>
+
+
+As of today (`r Sys.Date()`):
+
+- **`r nrow(available.packages())`** packages are available on the [`CRAN`](https://cran.r-project.org)
+- **`r 'https://www.bioconductor.org/packages/release/bioc/' |> rvest::read_html() |> rvest::html_table() |> _[[1]] |> nrow()`** packages on `Bioconductor`
+
+
+## Recommended environment
+
+![](images/pkg-environment.png){width=65% fig-align='center'}
+
+
+## Development workflow
+
+![](images/pkg-steps.png)
+
+
+
+## Package structure
+
+A package contains two main components:
+
+- a `DESCRIPTION` file with package metadata
+- a folder `R/` with documented functions
+
+<br/>
+
+:::: { .columns }
+::: { .column width="20%"}
+```
+.
+├─ R/
+│  └─ fun.R
+│ 
+└─ DESCRIPTION
+```
+:::
+
+::: { .column .center width="60%"}
+
+:::
+
+::: { .column width="20%"}
+
+:::
+
+::::
+
+
+
+
+## Package structure
+
+A package contains two main components:
+
+- a `DESCRIPTION` file with package metadata
+- a folder `R/` with documented functions
+
+<br/>
+
+:::: { .columns }
+::: { .column width="20%"}
+```
+.
+├─ R/
+│  └─ fun.R
+│ 
+└─ DESCRIPTION
+```
+:::
+
+::: { .column .center width="60%"}
+<br/>
+`devtools::document()`
+<br/>
+{{< fa circle-right >}}
+:::
+
+::: { .column width="20%"}
+```
+.
+├─ R/
+│  └─ fun.R
+│ 
+├─ man/
+│  └─ fun.Rd
+│ 
+├─ NAMESPACE
+│ 
+└─ DESCRIPTION
+```
+:::
+
+::::
+
+<br/>
+
+The function `devtools::document()` automatically generates a folder `man/` (function documentation) and the `NAMESPACE` file.
+
+
+
+## What's a function?
+
+> A **function** is a block of code organized together to perform a specific task and only runs when it is called. It can have **parameters** and can **return** a result.
+
+<br/>
+
+{{< fa circle-right >}} &nbsp;**Automate** common and repetitive tasks
+
+<br/>
+
+**Advantages**[^r4ds]
+
+- You can give a function an **evocative name** that makes your code easier to understand.
+- As requirements change, you only need to **update code in one place**, instead of many.
+- You **eliminate** the chance of making **incidental mistakes** when you copy and paste.
+- It makes it easier to **reuse work** from project-to-project, increasing your productivity over time.
+
+[^r4ds]: R for Data Science (2^e^ ed.) <https://r4ds.hadley.nz/functions.html>
+
+
+## Creating a function
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Function definition ----
+
+function_name <- function(input) {
+  
+  # Code block
+  # Code block
+  # Code block
+  
+  return(output)
+}
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+- A function is defined by calling `function()`
+- A function should have an **explicit name**
+- A function can have 0, 1 or many **parameters** (inputs)
+- A function can **return** a value (output) 
+:::
+
+::::
+
+. . .
+
+<br/>
+
+**Defining** a function
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Arithmetic mean ----
+
+arithmetic_mean <- function(x) {
+  
+  y <- sum(x) / length(x)
+  
+  return(y)
+}
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+:::
+
+::::
+
+
+## Creating a function
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Function definition ----
+
+function_name <- function(input) {
+  
+  # Code block
+  # Code block
+  # Code block
+  
+  return(output)
+}
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+- A function is defined by calling `function()`
+- A function should have an **explicit name**
+- A function can have 0, 1 or many **parameters** (inputs)
+- A function can **return** a value (output) 
+:::
+
+::::
+
+
+<br/>
+
+**Defining** a function
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Arithmetic mean ----
+
+arithmetic_mean <- function(x) {
+  
+  y <- sum(x) / length(x)
+  
+  return(y)
+}
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: true
+
+## Simplification ----
+
+arithmetic_mean <- function(x) {
+  
+  sum(x) / length(x)
+}
+```
+:::
+
+::::
+
+
+. . .
+
+<br/>
+
+**Calling** the function
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: true
+
+## Arithmetic mean ----
+
+arithmetic_mean(x = c(4, 6, 5, 10))
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: true
+
+## Comparison ----
+
+mean(x = c(4, 6, 5, 10))
+```
+:::
+
+::::
+
+
+## Documenting function
+
+:::: {.columns}
+
+::: {.column width=25%}
+![](images/roxygen2-logo.png){width=70%}
+:::
+
+::: {.column width=75%}
+- Specially-structured **comments preceding** each function definition
+- **Lightweight syntax** easy to write and to read
+- Syntax: `#' @field value`
+- Keep function definition and documentation in the same file
+- Automatically write `.Rd` files (in `man/`) and `NAMESPACE`
+
+{{< fa circle-right >}} &nbsp;Get started w/ `roxygen2`: [**here**](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html)
+:::
+
+::::
+
+. . .
+
+<br/>
+
+:::: {.columns}
+::: {.column width=50%}
+```{r}
+#| echo: true
+#| eval: true
+
+#' Compute the arithmetic mean
+#'
+#' This function computes the arithmetic mean of a numeric variable.
+#'
+#' @param x a `numeric` vector
+#'
+#' @return A `numeric` value representing the arithmetic mean of `x`.
+#'
+#' @export
+#'
+#' @examples
+#' x <- 1:10
+#' arithmetic_mean(x)
+
+arithmetic_mean <- function(x) {
+  
+  sum(x) / length(x)
+}
+```
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+
+## Documenting function
+
+:::: {.columns}
+
+::: {.column width=25%}
+![](images/roxygen2-logo.png){width=70%}
+:::
+
+::: {.column width=75%}
+- Specially-structured **comments preceding** each function definition
+- **Lightweight syntax** easy to write and to read
+- Syntax: `#' @field value`
+- Keep function definition and documentation in the same file
+- Automatically write `.Rd` files (in `man/`) and `NAMESPACE`
+
+{{< fa circle-right >}} &nbsp;Get started w/ `roxygen2`: [**here**](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html)
+:::
+
+::::
+
+
+<br/>
+
+:::: {.columns}
+::: {.column width=50%}
+```{r}
+#| echo: true
+#| eval: true
+
+#' Compute the arithmetic mean
+#'
+#' This function computes the arithmetic mean of a numeric variable.
+#'
+#' @param x a `numeric` vector
+#'
+#' @return A `numeric` value representing the arithmetic mean of `x`.
+#'
+#' @export
+#'
+#' @examples
+#' x <- 1:10
+#' arithmetic_mean(x)
+
+arithmetic_mean <- function(x) {
+  
+  sum(x) / length(x)
+}
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=40%}
+<br/><br/>
+
+Then, run **`devtools::document()`** to automatically generate `.Rd` files in `man/` and the `NAMESPACE` file
+:::
+
+::::
+
+
+## The `DESCRIPTION` file
+
+Main component of an {{< fa brands r-project >}} package, the `DESCRIPTION` file describes **package metadata**.
+
+<br>
+
+```
+Package: nameofthepackage
+Type: Package
+Title: The Title of the Package
+Authors@R: c(
+    person(given   = "John",
+           family  = "Doe",
+           role    = c("aut", "cre", "cph"),
+           email   = "john.doe@domain.com",
+           comment = c(ORCID = "9999-9999-9999-9999")))
+Description: A paragraph providing a full description of 
+    the package.
+License: GPL (>= 2)
+```
+
+<br>
+
+{{< fa circle-right >}} &nbsp;**External packages** required by the package will be listed in this file.
+
+
+
+## Example
+
+![](images/forcis-repo.png){width=50% fig-align='center'}
+
+<br/>
+
+:::: {.columns}
+
+::: {.column .center width=25%}
+{{< fa database >}}
+::: {.small}
+**Database** hosted on<br/>[**Zenodo**](https://zenodo.org/records/12724286)
+:::
+:::
+
+::: {.column .center width=25%}
+{{< fa file-lines >}}
+::: {.small}
+**Data paper** published in<br/>[**Scientific Data**](https://www.nature.com/articles/s41597-023-02264-2)
+:::
+:::
+
+::: {.column .center width=25%}
+{{< fa cube >}}
+::: {.small}
+**Package** hosted on [**GitHub**](https://github.com/frbcesab/forcis)<br/>(coming soon on the CRAN)
+:::
+:::
+
+
+::: {.column .center width=25%}
+{{< fa file-lines >}}
+::: {.small}
+**Software paper** submitted at<br/>Methods in Ecology and Evolution
+:::
+:::
+
+::::
+
+## Must-read resources
+
+
+:::: {.columns}
+::: {.column width=50%}
+[![](images/r-pkg.jpg){width=65%}](https://r-pkgs.org/)
+:::
+
+::: {.column width=50%}
+[![](images/r-ext.png){width=61%}](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)
+:::
+
+::::
+
+:::: {.columns}
+::: {.column width=50%}
+[{{< fa circle-right >}} &nbsp;<https://r-pkgs.org/>]{.small}
+:::
+
+::: {.column width=50%}
+[{{< fa circle-right >}} &nbsp;<https://cran.r-project.org/doc/manuals/r-release/R-exts.html>]{.small}
+:::
+
+::::

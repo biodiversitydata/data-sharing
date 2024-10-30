@@ -11,19 +11,26 @@
 
 :::: { .columns }
 
-::: { .column .center width="33%"}
+
+::: { .column .center width="20%"}
 {{< fa right-to-bracket size=2x >}}
 Introduction
 :::
 
-::: { .column .center width="33%"}
-{{< fa brands r-project size=2x >}}
-R package
+::: { .column .center width="20%"}
 :::
 
-::: { .column .center width="33%"}
-{{< fa globe size=2x >}}
-Shiny App
+::: { .column .center width="20%"}
+{{< fa folder size=2x >}}
+Research compendium
+:::
+
+::: { .column .center width="20%"}
+:::
+
+::: { .column .center width="20%"}
+{{< fa cube size=2x >}}
+R package
 :::
 
 ::::
@@ -34,15 +41,23 @@ Shiny App
 
 :::: { .columns }
 
-::: { .column .center width="33%"}
+::: { .column .center width="20%"}
 :::
 
-::: { .column .center width="33%"}
+::: { .column .center width="20%"}
+{{< fa globe size=2x >}}
+Shiny App
+:::
+
+::: { .column .center width="20%"}
+:::
+
+::: { .column .center width="20%"}
 {{< fa expand size=2x >}}
 Others
 :::
 
-::: { .column .center width="33%"}
+::: { .column .center width="20%"}
 :::
 
 ::::

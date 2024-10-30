@@ -22,5 +22,7 @@ inst/doc
 .Rbuildignore
 index.html
 index_files/
+sections/*.html
+sections/*_files
 
 /.quarto/

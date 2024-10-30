@@ -1,0 +1,375 @@
+# {{< fa folder size=1x >}} &nbsp;&nbsp;Research compendium
+
+
+
+## Research compendium
+
+> The goal of a research compendium is to provide a ***standard*** and easily 
+recognisable way for ***organizing the digital materials*** of a project to enable 
+others to ***inspect***, ***reproduce***, and ***extend the research***.
+
+::: {.citation}
+Marwick B, Boettiger C & Mullen L (2018)[^marwick] 
+:::
+
+. . .
+
+<br><br>
+
+::: {.center}
+::: {.boxed}
+**Three  generic  principles**
+:::
+:::
+
+<br/>
+
+:::: { .columns }
+::: { .column .center width="33%"}
+{{< fa circle-chevron-down >}}
+Files organized according to the **conventions** of the community
+:::
+::: { .column .center width="33%"}
+{{< fa circle-chevron-down >}}
+Clear **separation** of data, method, and output
+:::
+::: { .column .center width="33%"}
+{{< fa circle-chevron-down >}}
+Specify the **computational environment** that was used
+:::
+::::
+
+. . .
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;A research compendium should be **self-contained**
+
+[^marwick]: <https://doi.org/10.7287/peerj.preprints.3192v2>
+
+
+
+## Research compendium
+
+{{< fa hand-point-right >}} &nbsp;Strong flexibility in the structure of a compendium
+
+
+:::: { .columns }
+::: { .column width="33%"}
+**Small compendium**
+
+```
+.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│ 
+├─ data/ 🔒
+│ 
+├─ code/
+│  └─ script.R
+│ 
+├─ outputs/
+│ 
+├─ LICENSE
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+:::
+
+::: { .column width="33%"}
+:::
+::::
+
+
+## Research compendium
+
+{{< fa hand-point-right >}} &nbsp;Strong flexibility in the structure of a compendium
+
+
+:::: { .columns }
+::: { .column width="33%"}
+**Small compendium**
+
+```
+.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│ 
+├─ data/ 🔒
+│ 
+├─ code/
+│  └─ script.R
+│ 
+├─ outputs/
+│ 
+├─ LICENSE
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+**Medium compendium**
+
+```
+.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+│
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+│
+├─ analyses/
+│  ├─ script-1.R
+│  └─ script-n.R
+│
+├─ outputs/
+│
+├─ make.R
+│
+├─ DESCRIPTION
+├─ LICENSE
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+:::
+::::
+
+
+## Research compendium
+
+{{< fa hand-point-right >}} &nbsp;Strong flexibility in the structure of a compendium
+
+
+:::: { .columns }
+::: { .column width="33%"}
+**Small compendium**
+
+```
+.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│ 
+├─ data/ 🔒
+│ 
+├─ code/
+│  └─ script.R
+│ 
+├─ outputs/
+│ 
+├─ LICENSE
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+**Medium compendium**
+
+```
+.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+│
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+│
+├─ analyses/
+│  ├─ script-1.R
+│  └─ script-n.R
+│
+├─ outputs/
+│
+├─ make.R
+│
+├─ DESCRIPTION
+├─ LICENSE
+└─ README.md
+```
+:::
+
+::: { .column width="33%"}
+**Large compendium**
+
+```
+.
+├─ .git/
+├─ .gitignore
+├─ .github/
+│  └─ workflows/
+│     ├─ workflow-1.yaml
+│     └─ workflow-n.yaml
+│
+├─ project.Rproj
+│
+├─ .renv/
+├─ renv.lock
+│
+├─ dockerfile
+├─ .dockerignore
+│
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+│
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+│
+├─ analyses/
+│  ├─ script-x.R
+│  └─ script-n.R
+│
+├─ outputs/
+│
+├─ figures/
+│
+├─ paper/
+│  ├─ references.bib
+│  ├─ style.csl
+│  └─ paper.Rmd
+│
+├─ make.R
+│
+├─ DESCRIPTION
+├─ CITATION.cff
+├─ CODE_OF_CONDUCT.md
+├─ CONTRIBUTING.md
+├─ LICENSE
+└─ README.md
+```
+:::
+::::
+
+
+## `README` please
+
+
+::::{.columns}
+:::{.column width="60%"}
+A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
+
+- each research compendium should contain a `README`
+- you can write different `README` (project, data, etc.)
+:::
+:::{.column width="40%"}
+![Source: <https://github.com/frbcesab/chessboard/blob/main/README.md>](images/readme-raw.png)
+:::
+::::
+
+
+## `README` please
+
+
+::::{.columns}
+:::{.column width="60%"}
+A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
+
+- each research compendium should contain a `README`
+- you can write different `README` (project, data, etc.)
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;[GitHub](https://github.com/) and other code hosting 
+platforms recognize and interpret `README` written in [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
+(`README.md`)
+:::
+:::{.column width="40%"}
+![Source: <https://github.com/frbcesab/chessboard/blob/main/README.md>](images/readme-raw.png)
+:::
+::::
+
+
+## `README` please
+
+
+::::{.columns}
+:::{.column width="60%"}
+A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
+
+- each research compendium should contain a `README`
+- you can write different `README` (project, data, etc.)
+
+<br>
+
+{{< fa hand-point-right >}} &nbsp;[GitHub](https://github.com/) and other code hosting 
+platforms recognize and interpret `README` written in [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
+(`README.md`)
+
+:::
+:::{.column width="40%"}
+![Source: <https://github.com/frbcesab/chessboard>](images/readme-github.png)
+:::
+::::
+
+
+
+## `README` please
+
+::::{.columns}
+:::{.column width="50%"}
+A good `README` should answer the following questions[^rpkg]:
+
+- Why should I use it?
+- How do I get it?
+- How do I use it?
+:::
+:::{.column width="50%"}
+:::
+::::
+
+
+
+
+## `README` please
+
+::::{.columns}
+:::{.column width="50%"}
+A good `README` should answer the following questions[^rpkg]:
+
+- Why should I use it?
+- How do I get it?
+- How do I use it?
+:::
+:::{.column width="50%"}
+**Main sections** (for a research compendium)
+
+- Title
+- Description
+- Content (file organization)
+- Prerequisites
+- Installation
+- Usage
+- License
+- Citation
+- Acknowledgements
+- References
+:::
+::::
+
+
+
+[^rpkg]: <https://r-pkgs.org/other-markdown.html#sec-readme>
+

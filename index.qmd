@@ -31,6 +31,12 @@ engine: knitr
 #| child: "sections/introduction.qmd"
 ```
 
+<!-- Insert section 'Shiny App' -->
+
+```{r}
+#| child: "sections/research-compendium.qmd"
+```
+
 <!-- Insert section 'R package' -->
 
 ```{r}

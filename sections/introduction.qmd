@@ -4,4 +4,188 @@
 
 ## Introduction
 
-Coming soon...
+:::: {.columns}
+
+::: {.column width=50%}
+- You released a new **database** (with metadata)
+- You published a **data paper**
+
+<!-- New list -->
+
+- And you wrote a lot of code...
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+## Introduction
+
+:::: {.columns}
+
+::: {.column width=50%}
+- You released a new **database** (with metadata)
+- You published a **data paper**
+
+<!-- New list -->
+
+- And you wrote a lot of code...
+
+<br/>
+
+{{< fa circle-right >}} &nbsp; **Why not sharing your code?**
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+## Introduction
+
+:::: {.columns}
+
+::: {.column width=50%}
+- You released a new **database** (with metadata)
+- You published a **data paper**
+
+<!-- New list -->
+
+- And you wrote a lot of code...
+
+<br/>
+
+{{< fa circle-right >}} &nbsp; **Why not sharing your code?**
+:::
+
+::: {.column width=50%}
+![](images/pipeline-1.png)
+
+<br/>
+
+Share your code to **reproduce your pipeline**
+:::
+
+::::
+
+
+
+## Introduction
+
+:::: {.columns}
+
+::: {.column width=50%}
+- You released a new **database** (with metadata)
+- You published a **data paper**
+
+<!-- New list -->
+
+- And you wrote a lot of code...
+
+<br/>
+
+{{< fa circle-right >}} &nbsp; **Why not sharing your code?**
+:::
+
+::: {.column width=50%}
+![](images/pipeline-2.png)
+
+<br/>
+
+Share your code to **access data**
+:::
+
+::::
+
+
+## Introduction
+
+:::: {.columns}
+
+::: {.column width=50%}
+- You released a new **database** (with metadata)
+- You published a **data paper**
+
+<!-- New list -->
+
+- And you wrote a lot of code...
+
+<br/>
+
+{{< fa circle-right >}} &nbsp; **Why not sharing your code?**
+:::
+
+::: {.column width=50%}
+![](images/pipeline-3.png)
+
+<br/>
+
+Share your code to **add new data**
+:::
+
+::::
+
+
+
+## Code hosting platforms
+
+::::{ .columns }
+:::{ .column width="60%"}
+
+GitHub and co are **cloud-based git repository hosting services**
+
+{{< fa hand-point-right >}} &nbsp;
+Perfect solutions to host projects (code) tracked by `git`
+
+
+<br>
+
+**Services**
+
+- Full integration of version control (commits, history, differences)
+- Easy collaboration w/ branches, forks, pull requests
+- Issues tracking system
+- Enhanced documentation rendering (README, Wiki)
+- Static website hosting
+- Automation & monitoring (CI/CD)
+:::
+
+:::{ .column .center width="40%"}
+<br/><br/>
+
+![](images/git-logo.png){width="50%"}
+:::
+
+::::
+
+
+## Code hosting platforms
+
+**Main platforms**
+
+::::{ .columns }
+:::{ .column width="50%" .center}
+![](images/github-logo.png){width="25%"}
+<br>
+[**GitHub**](https://github.com/)
+<br>
+[_Microsoft_]{.small}
+:::
+:::{ .column width="50%" .center}
+![](images/gitlab-logo.png){width="25%"}
+<br>
+[**GitLab**](https://gitlab.com/)
+<br>
+[_Open source_]{.small}
+:::
+::::
+
+
+<br/><br/><br/><br/>
+
+{{< fa circle-right >}} &nbsp;**GitHub account**: <https://github.com/ahasverus/>
+
+{{< fa circle-right >}} &nbsp;**GitHub organization**: <https://github.com/frbcesab/>
