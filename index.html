@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -341,10 +406,10 @@
 <p><img data-src="images/logo-title-slide.png"></p>
 </div><!-- Title slide content --><div class="column information" style="width:68%;">
 <div class="title">
-<p>Sharing data and more</p>
+<p>Sharing code &amp; tools</p>
 </div>
 <div class="subtitle">
-<p>Shiny apps, websites and R packages</p>
+<p>Research compendium, R package, Shiny App &amp; website</p>
 </div>
 <div class="date">
 <p>October 2024</p>
@@ -401,24 +466,33 @@ Author name<br/>
 <h2>Table of contents</h2>
 <p><br> <br> <br> <br></p>
 <div class="columns">
-<div class="column center" style="width:33%;">
+<div class="column center" style="width:20%;">
 <p><i class="fa-solid fa-right-to-bracket fa-2x" aria-label="right-to-bracket"></i></p>
 <p>Introduction</p>
-</div><div class="column center" style="width:33%;">
-<p><i class="fa-brands fa-r-project fa-2x" aria-label="r-project"></i></p>
+</div><div class="column center" style="width:20%;">
+
+</div><div class="column center" style="width:20%;">
+<p><i class="fa-solid fa-folder fa-2x" aria-label="folder"></i></p>
+<p>Research compendium</p>
+</div><div class="column center" style="width:20%;">
+
+</div><div class="column center" style="width:20%;">
+<p><i class="fa-solid fa-cube fa-2x" aria-label="cube"></i></p>
 <p>R package</p>
-</div><div class="column center" style="width:33%;">
-<p><i class="fa-solid fa-globe fa-2x" aria-label="globe"></i></p>
-<p>Shiny App</p>
 </div></div>
 <p><br><br></p>
 <div class="columns">
-<div class="column center" style="width:33%;">
+<div class="column center" style="width:20%;">
 
-</div><div class="column center" style="width:33%;">
+</div><div class="column center" style="width:20%;">
+<p><i class="fa-solid fa-globe fa-2x" aria-label="globe"></i></p>
+<p>Shiny App</p>
+</div><div class="column center" style="width:20%;">
+
+</div><div class="column center" style="width:20%;">
 <p><i class="fa-solid fa-expand fa-2x" aria-label="expand"></i></p>
 <p>Others</p>
-</div><div class="column center" style="width:33%;">
+</div><div class="column center" style="width:20%;">
 
 </div></div>
 <!-- Insert section 'Introduction' -->
@@ -430,17 +504,839 @@ Author name<br/>
 </section>
 <section id="introduction-1" class="slide level2">
 <h2>Introduction</h2>
-<p>Coming soon…</p>
-<!-- Insert section 'R package' -->
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>You released a new <strong>database</strong> (with metadata)</li>
+<li>You published a <strong>data paper</strong></li>
+</ul>
+<!-- New list -->
+<ul>
+<li>And you wrote a lot of code…</li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="introduction-2" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>You released a new <strong>database</strong> (with metadata)</li>
+<li>You published a <strong>data paper</strong></li>
+</ul>
+<!-- New list -->
+<ul>
+<li>And you wrote a lot of code…</li>
+</ul>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="introduction-3" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>You released a new <strong>database</strong> (with metadata)</li>
+<li>You published a <strong>data paper</strong></li>
+</ul>
+<!-- New list -->
+<ul>
+<li>And you wrote a lot of code…</li>
+</ul>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/pipeline-1.png"></p>
+<p><br></p>
+<p>Share your code to <strong>reproduce your pipeline</strong></p>
+</div></div>
+</section>
+<section id="introduction-4" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>You released a new <strong>database</strong> (with metadata)</li>
+<li>You published a <strong>data paper</strong></li>
+</ul>
+<!-- New list -->
+<ul>
+<li>And you wrote a lot of code…</li>
+</ul>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/pipeline-2.png"></p>
+<p><br></p>
+<p>Share your code to <strong>access data</strong></p>
+</div></div>
+</section>
+<section id="introduction-5" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>You released a new <strong>database</strong> (with metadata)</li>
+<li>You published a <strong>data paper</strong></li>
+</ul>
+<!-- New list -->
+<ul>
+<li>And you wrote a lot of code…</li>
+</ul>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/pipeline-3.png"></p>
+<p><br></p>
+<p>Share your code to <strong>add new data</strong></p>
+</div></div>
+</section>
+<section id="code-hosting-platforms" class="slide level2">
+<h2>Code hosting platforms</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>GitHub and co are <strong>cloud-based git repository hosting services</strong></p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp; Perfect solutions to host projects (code) tracked by <code>git</code></p>
+<p><br></p>
+<p><strong>Services</strong></p>
+<ul>
+<li>Full integration of version control (commits, history, differences)</li>
+<li>Easy collaboration w/ branches, forks, pull requests</li>
+<li>Issues tracking system</li>
+<li>Enhanced documentation rendering (README, Wiki)</li>
+<li>Static website hosting</li>
+<li>Automation &amp; monitoring (CI/CD)</li>
+</ul>
+</div><div class="column center" style="width:40%;">
+<p><br><br></p>
+<p><img data-src="images/git-logo.png" style="width:50.0%"></p>
+</div></div>
+</section>
+<section id="code-hosting-platforms-1" class="slide level2">
+<h2>Code hosting platforms</h2>
+<p><strong>Main platforms</strong></p>
+<div class="columns">
+<div class="column center" style="width:50%;">
+<p><img data-src="images/github-logo.png" style="width:25.0%"> <br> <a href="https://github.com/"><strong>GitHub</strong></a> <br> <span class="small"><em>Microsoft</em></span></p>
+</div><div class="column center" style="width:50%;">
+<p><img data-src="images/gitlab-logo.png" style="width:25.0%"> <br> <a href="https://gitlab.com/"><strong>GitLab</strong></a> <br> <span class="small"><em>Open source</em></span></p>
+</div></div>
+<p><br><br><br><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>GitHub account</strong>: <a href="https://github.com/ahasverus/" class="uri">https://github.com/ahasverus/</a></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>GitHub organization</strong>: <a href="https://github.com/frbcesab/" class="uri">https://github.com/frbcesab/</a></p>
+<!-- Insert section 'Shiny App' -->
 </section></section>
 <section>
-<section id="r-package" class="title-slide slide level1 center">
-<h1><i class="fa-brands fa-r-project fa-1x" aria-label="r-project"></i> &nbsp;&nbsp;R package</h1>
+<section id="research-compendium" class="title-slide slide level1 center">
+<h1><i class="fa-solid fa-folder fa-1x" aria-label="folder"></i> &nbsp;&nbsp;Research compendium</h1>
 
 </section>
-<section id="r-package-1" class="slide level2">
-<h2>R package</h2>
-<p>Coming soon…</p>
+<section id="research-compendium-1" class="slide level2">
+<h2>Research compendium</h2>
+<blockquote>
+<p>The goal of a research compendium is to provide a <strong><em>standard</em></strong> and easily recognisable way for <strong><em>organizing the digital materials</em></strong> of a project to enable others to <strong><em>inspect</em></strong>, <strong><em>reproduce</em></strong>, and <strong><em>extend the research</em></strong>.</p>
+</blockquote>
+<div class="citation">
+<p>Marwick B, Boettiger C &amp; Mullen L (2018)<sup>1</sup></p>
+</div>
+<div class="fragment">
+<p><br><br></p>
+<div class="center">
+<div class="boxed">
+<p><strong>Three generic principles</strong></p>
+</div>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column center" style="width:33%;">
+<p><i class="fa-solid fa-circle-chevron-down" aria-label="circle-chevron-down"></i></p>
+<p>Files organized according to the <strong>conventions</strong> of the community</p>
+</div><div class="column center" style="width:33%;">
+<p><i class="fa-solid fa-circle-chevron-down" aria-label="circle-chevron-down"></i></p>
+<p>Clear <strong>separation</strong> of data, method, and output</p>
+</div><div class="column center" style="width:33%;">
+<p><i class="fa-solid fa-circle-chevron-down" aria-label="circle-chevron-down"></i></p>
+<p>Specify the <strong>computational environment</strong> that was used</p>
+</div></div>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;A research compendium should be <strong>self-contained</strong></p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://doi.org/10.7287/peerj.preprints.3192v2" class="uri">https://doi.org/10.7287/peerj.preprints.3192v2</a></p></li></ol></aside></section>
+<section id="research-compendium-2" class="slide level2">
+<h2>Research compendium</h2>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;Strong flexibility in the structure of a compendium</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Small compendium</strong></p>
+<pre><code>.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│ 
+├─ data/ 🔒
+│ 
+├─ code/
+│  └─ script.R
+│ 
+├─ outputs/
+│ 
+├─ LICENSE
+└─ README.md</code></pre>
+</div><div class="column" style="width:33%;">
+
+</div><div class="column" style="width:33%;">
+
+</div></div>
+</section>
+<section id="research-compendium-3" class="slide level2">
+<h2>Research compendium</h2>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;Strong flexibility in the structure of a compendium</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Small compendium</strong></p>
+<pre><code>.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│ 
+├─ data/ 🔒
+│ 
+├─ code/
+│  └─ script.R
+│ 
+├─ outputs/
+│ 
+├─ LICENSE
+└─ README.md</code></pre>
+</div><div class="column" style="width:33%;">
+<p><strong>Medium compendium</strong></p>
+<pre><code>.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+│
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+│
+├─ analyses/
+│  ├─ script-1.R
+│  └─ script-n.R
+│
+├─ outputs/
+│
+├─ make.R
+│
+├─ DESCRIPTION
+├─ LICENSE
+└─ README.md</code></pre>
+</div><div class="column" style="width:33%;">
+
+</div></div>
+</section>
+<section id="research-compendium-4" class="slide level2">
+<h2>Research compendium</h2>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;Strong flexibility in the structure of a compendium</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Small compendium</strong></p>
+<pre><code>.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│ 
+├─ data/ 🔒
+│ 
+├─ code/
+│  └─ script.R
+│ 
+├─ outputs/
+│ 
+├─ LICENSE
+└─ README.md</code></pre>
+</div><div class="column" style="width:33%;">
+<p><strong>Medium compendium</strong></p>
+<pre><code>.
+├─ .git/
+├─ .gitignore
+│
+├─ project.Rproj
+│
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+│
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+│
+├─ analyses/
+│  ├─ script-1.R
+│  └─ script-n.R
+│
+├─ outputs/
+│
+├─ make.R
+│
+├─ DESCRIPTION
+├─ LICENSE
+└─ README.md</code></pre>
+</div><div class="column" style="width:33%;">
+<p><strong>Large compendium</strong></p>
+<pre><code>.
+├─ .git/
+├─ .gitignore
+├─ .github/
+│  └─ workflows/
+│     ├─ workflow-1.yaml
+│     └─ workflow-n.yaml
+│
+├─ project.Rproj
+│
+├─ .renv/
+├─ renv.lock
+│
+├─ dockerfile
+├─ .dockerignore
+│
+├─ data/
+│  ├─ raw-data/ 🔒
+│  └─ derived-data/
+│
+├─ R/
+│  ├─ function-x.R
+│  └─ function-y.R
+│
+├─ analyses/
+│  ├─ script-x.R
+│  └─ script-n.R
+│
+├─ outputs/
+│
+├─ figures/
+│
+├─ paper/
+│  ├─ references.bib
+│  ├─ style.csl
+│  └─ paper.Rmd
+│
+├─ make.R
+│
+├─ DESCRIPTION
+├─ CITATION.cff
+├─ CODE_OF_CONDUCT.md
+├─ CONTRIBUTING.md
+├─ LICENSE
+└─ README.md</code></pre>
+</div></div>
+</section>
+<section id="readme-please" class="slide level2">
+<h2><code>README</code> please</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>A <a href="https://en.wikipedia.org/wiki/README"><code>README</code></a> is a text file that introduces and explains your project</p>
+<ul>
+<li>each research compendium should contain a <code>README</code></li>
+<li>you can write different <code>README</code> (project, data, etc.)</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/readme-raw.png"></p>
+<figcaption>Source: <a href="https://github.com/frbcesab/chessboard/blob/main/README.md" class="uri">https://github.com/frbcesab/chessboard/blob/main/README.md</a></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="readme-please-1" class="slide level2">
+<h2><code>README</code> please</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>A <a href="https://en.wikipedia.org/wiki/README"><code>README</code></a> is a text file that introduces and explains your project</p>
+<ul>
+<li>each research compendium should contain a <code>README</code></li>
+<li>you can write different <code>README</code> (project, data, etc.)</li>
+</ul>
+<p><br></p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;<a href="https://github.com/">GitHub</a> and other code hosting platforms recognize and interpret <code>README</code> written in <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a> (<code>README.md</code>)</p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/readme-raw.png"></p>
+<figcaption>Source: <a href="https://github.com/frbcesab/chessboard/blob/main/README.md" class="uri">https://github.com/frbcesab/chessboard/blob/main/README.md</a></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="readme-please-2" class="slide level2">
+<h2><code>README</code> please</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>A <a href="https://en.wikipedia.org/wiki/README"><code>README</code></a> is a text file that introduces and explains your project</p>
+<ul>
+<li>each research compendium should contain a <code>README</code></li>
+<li>you can write different <code>README</code> (project, data, etc.)</li>
+</ul>
+<p><br></p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;<a href="https://github.com/">GitHub</a> and other code hosting platforms recognize and interpret <code>README</code> written in <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a> (<code>README.md</code>)</p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/readme-github.png"></p>
+<figcaption>Source: <a href="https://github.com/frbcesab/chessboard" class="uri">https://github.com/frbcesab/chessboard</a></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="readme-please-3" class="slide level2">
+<h2><code>README</code> please</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>A good <code>README</code> should answer the following questions<sup>1</sup>:</p>
+<ul>
+<li>Why should I use it?</li>
+<li>How do I get it?</li>
+<li>How do I use it?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://r-pkgs.org/other-markdown.html#sec-readme" class="uri">https://r-pkgs.org/other-markdown.html#sec-readme</a></p></li></ol></aside></section>
+<section id="readme-please-4" class="slide level2">
+<h2><code>README</code> please</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>A good <code>README</code> should answer the following questions<sup>1</sup>:</p>
+<ul>
+<li>Why should I use it?</li>
+<li>How do I get it?</li>
+<li>How do I use it?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Main sections</strong> (for a research compendium)</p>
+<ul>
+<li>Title</li>
+<li>Description</li>
+<li>Content (file organization)</li>
+<li>Prerequisites</li>
+<li>Installation</li>
+<li>Usage</li>
+<li>License</li>
+<li>Citation</li>
+<li>Acknowledgements</li>
+<li>References</li>
+</ul>
+</div></div>
+<!-- Insert section 'R package' -->
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://r-pkgs.org/other-markdown.html#sec-readme" class="uri">https://r-pkgs.org/other-markdown.html#sec-readme</a></p></li></ol></aside></section></section>
+<section>
+<section id="r-package" class="title-slide slide level1 center">
+<h1><i class="fa-solid fa-cube fa-1x" aria-label="cube"></i> &nbsp;&nbsp;R package</h1>
+
+</section>
+<section id="whats-an-r-package" class="slide level2">
+<h2>What’s an R Package?</h2>
+<blockquote>
+<p>In <i class="fa-brands fa-r-project" aria-label="r-project"></i> &nbsp; the fundamental unit of shareable code is the package. A package bundles together <code>code</code>, <code>data</code>, <code>documentation</code>, and <code>tests</code>, and is easy to share with others.</p>
+</blockquote>
+<div class="citation">
+<p>Hadley Wickham - R packages (1<sup>st</sup> ed.)</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>An <i class="fa-brands fa-r-project" aria-label="r-project"></i> &nbsp; package:</p>
+<ul>
+<li>is a collection of <code>well-documented functions</code></li>
+<li>makes your work more <code>reproducible</code></li>
+<li>makes your code <code>useful</code> for you and for others</li>
+</ul>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>As of today (2024-10-30):</p>
+<ul>
+<li><strong>21586</strong> packages are available on the <a href="https://cran.r-project.org"><code>CRAN</code></a></li>
+<li><strong>2300</strong> packages on <code>Bioconductor</code></li>
+</ul>
+</div>
+</section>
+<section id="recommended-environment" class="slide level2">
+<h2>Recommended environment</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pkg-environment.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
+</figure>
+</div>
+</section>
+<section id="development-workflow" class="slide level2">
+<h2>Development workflow</h2>
+<p><img data-src="images/pkg-steps.png"></p>
+</section>
+<section id="package-structure" class="slide level2">
+<h2>Package structure</h2>
+<p>A package contains two main components:</p>
+<ul>
+<li>a <code>DESCRIPTION</code> file with package metadata</li>
+<li>a folder <code>R/</code> with documented functions</li>
+</ul>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<pre><code>.
+├─ R/
+│  └─ fun.R
+│ 
+└─ DESCRIPTION</code></pre>
+</div><div class="column center" style="width:60%;">
+
+</div><div class="column" style="width:20%;">
+
+</div></div>
+</section>
+<section id="package-structure-1" class="slide level2">
+<h2>Package structure</h2>
+<p>A package contains two main components:</p>
+<ul>
+<li>a <code>DESCRIPTION</code> file with package metadata</li>
+<li>a folder <code>R/</code> with documented functions</li>
+</ul>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<pre><code>.
+├─ R/
+│  └─ fun.R
+│ 
+└─ DESCRIPTION</code></pre>
+</div><div class="column center" style="width:60%;">
+<p><br> <code>devtools::document()</code> <br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i></p>
+</div><div class="column" style="width:20%;">
+<pre><code>.
+├─ R/
+│  └─ fun.R
+│ 
+├─ man/
+│  └─ fun.Rd
+│ 
+├─ NAMESPACE
+│ 
+└─ DESCRIPTION</code></pre>
+</div></div>
+<p><br></p>
+<p>The function <code>devtools::document()</code> automatically generates a folder <code>man/</code> (function documentation) and the <code>NAMESPACE</code> file.</p>
+</section>
+<section id="whats-a-function" class="slide level2">
+<h2>What’s a function?</h2>
+<blockquote>
+<p>A <strong>function</strong> is a block of code organized together to perform a specific task and only runs when it is called. It can have <strong>parameters</strong> and can <strong>return</strong> a result.</p>
+</blockquote>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Automate</strong> common and repetitive tasks</p>
+<p><br></p>
+<p><strong>Advantages</strong><sup>1</sup></p>
+<ul>
+<li>You can give a function an <strong>evocative name</strong> that makes your code easier to understand.</li>
+<li>As requirements change, you only need to <strong>update code in one place</strong>, instead of many.</li>
+<li>You <strong>eliminate</strong> the chance of making <strong>incidental mistakes</strong> when you copy and paste.</li>
+<li>It makes it easier to <strong>reuse work</strong> from project-to-project, increasing your productivity over time.</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>R for Data Science (2<sup>e</sup> ed.) <a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></p></li></ol></aside></section>
+<section id="creating-a-function" class="slide level2">
+<h2>Creating a function</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="do">## Function definition ----</span></span>
+<span id="cb10-2"><a href=""></a></span>
+<span id="cb10-3"><a href=""></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(input) {</span>
+<span id="cb10-4"><a href=""></a>  </span>
+<span id="cb10-5"><a href=""></a>  <span class="co"># Code block</span></span>
+<span id="cb10-6"><a href=""></a>  <span class="co"># Code block</span></span>
+<span id="cb10-7"><a href=""></a>  <span class="co"># Code block</span></span>
+<span id="cb10-8"><a href=""></a>  </span>
+<span id="cb10-9"><a href=""></a>  <span class="fu">return</span>(output)</span>
+<span id="cb10-10"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li>A function is defined by calling <code>function()</code></li>
+<li>A function should have an <strong>explicit name</strong></li>
+<li>A function can have 0, 1 or many <strong>parameters</strong> (inputs)</li>
+<li>A function can <strong>return</strong> a value (output)</li>
+</ul>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<p><strong>Defining</strong> a function</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="do">## Arithmetic mean ----</span></span>
+<span id="cb11-2"><a href=""></a></span>
+<span id="cb11-3"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb11-4"><a href=""></a>  </span>
+<span id="cb11-5"><a href=""></a>  y <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb11-6"><a href=""></a>  </span>
+<span id="cb11-7"><a href=""></a>  <span class="fu">return</span>(y)</span>
+<span id="cb11-8"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+
+</div></div>
+</div>
+</section>
+<section id="creating-a-function-1" class="slide level2">
+<h2>Creating a function</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="do">## Function definition ----</span></span>
+<span id="cb12-2"><a href=""></a></span>
+<span id="cb12-3"><a href=""></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(input) {</span>
+<span id="cb12-4"><a href=""></a>  </span>
+<span id="cb12-5"><a href=""></a>  <span class="co"># Code block</span></span>
+<span id="cb12-6"><a href=""></a>  <span class="co"># Code block</span></span>
+<span id="cb12-7"><a href=""></a>  <span class="co"># Code block</span></span>
+<span id="cb12-8"><a href=""></a>  </span>
+<span id="cb12-9"><a href=""></a>  <span class="fu">return</span>(output)</span>
+<span id="cb12-10"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li>A function is defined by calling <code>function()</code></li>
+<li>A function should have an <strong>explicit name</strong></li>
+<li>A function can have 0, 1 or many <strong>parameters</strong> (inputs)</li>
+<li>A function can <strong>return</strong> a value (output)</li>
+</ul>
+</div></div>
+<p><br></p>
+<p><strong>Defining</strong> a function</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="do">## Arithmetic mean ----</span></span>
+<span id="cb13-2"><a href=""></a></span>
+<span id="cb13-3"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb13-4"><a href=""></a>  </span>
+<span id="cb13-5"><a href=""></a>  y <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb13-6"><a href=""></a>  </span>
+<span id="cb13-7"><a href=""></a>  <span class="fu">return</span>(y)</span>
+<span id="cb13-8"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="do">## Simplification ----</span></span>
+<span id="cb14-2"><a href=""></a></span>
+<span id="cb14-3"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb14-4"><a href=""></a>  </span>
+<span id="cb14-5"><a href=""></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb14-6"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<p><strong>Calling</strong> the function</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="do">## Arithmetic mean ----</span></span>
+<span id="cb15-2"><a href=""></a></span>
+<span id="cb15-3"><a href=""></a><span class="fu">arithmetic_mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.25</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="do">## Comparison ----</span></span>
+<span id="cb17-2"><a href=""></a></span>
+<span id="cb17-3"><a href=""></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.25</code></pre>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<section id="documenting-function" class="slide level2">
+<h2>Documenting function</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="images/roxygen2-logo.png" style="width:70.0%"></p>
+</div><div class="column" style="width:75%;">
+<ul>
+<li>Specially-structured <strong>comments preceding</strong> each function definition</li>
+<li><strong>Lightweight syntax</strong> easy to write and to read</li>
+<li>Syntax: <code>#' @field value</code></li>
+<li>Keep function definition and documentation in the same file</li>
+<li>Automatically write <code>.Rd</code> files (in <code>man/</code>) and <code>NAMESPACE</code></li>
+</ul>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;Get started w/ <code>roxygen2</code>: <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html"><strong>here</strong></a></p>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="co">#' Compute the arithmetic mean</span></span>
+<span id="cb19-2"><a href=""></a><span class="co">#'</span></span>
+<span id="cb19-3"><a href=""></a><span class="co">#' This function computes the arithmetic mean of a numeric variable.</span></span>
+<span id="cb19-4"><a href=""></a><span class="co">#'</span></span>
+<span id="cb19-5"><a href=""></a><span class="co">#' @param x a `numeric` vector</span></span>
+<span id="cb19-6"><a href=""></a><span class="co">#'</span></span>
+<span id="cb19-7"><a href=""></a><span class="co">#' @return A `numeric` value representing the arithmetic mean of `x`.</span></span>
+<span id="cb19-8"><a href=""></a><span class="co">#'</span></span>
+<span id="cb19-9"><a href=""></a><span class="co">#' @export</span></span>
+<span id="cb19-10"><a href=""></a><span class="co">#'</span></span>
+<span id="cb19-11"><a href=""></a><span class="co">#' @examples</span></span>
+<span id="cb19-12"><a href=""></a><span class="co">#' x &lt;- 1:10</span></span>
+<span id="cb19-13"><a href=""></a><span class="co">#' arithmetic_mean(x)</span></span>
+<span id="cb19-14"><a href=""></a></span>
+<span id="cb19-15"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb19-16"><a href=""></a>  </span>
+<span id="cb19-17"><a href=""></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb19-18"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</div>
+</section>
+<section id="documenting-function-1" class="slide level2">
+<h2>Documenting function</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="images/roxygen2-logo.png" style="width:70.0%"></p>
+</div><div class="column" style="width:75%;">
+<ul>
+<li>Specially-structured <strong>comments preceding</strong> each function definition</li>
+<li><strong>Lightweight syntax</strong> easy to write and to read</li>
+<li>Syntax: <code>#' @field value</code></li>
+<li>Keep function definition and documentation in the same file</li>
+<li>Automatically write <code>.Rd</code> files (in <code>man/</code>) and <code>NAMESPACE</code></li>
+</ul>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;Get started w/ <code>roxygen2</code>: <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html"><strong>here</strong></a></p>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="co">#' Compute the arithmetic mean</span></span>
+<span id="cb20-2"><a href=""></a><span class="co">#'</span></span>
+<span id="cb20-3"><a href=""></a><span class="co">#' This function computes the arithmetic mean of a numeric variable.</span></span>
+<span id="cb20-4"><a href=""></a><span class="co">#'</span></span>
+<span id="cb20-5"><a href=""></a><span class="co">#' @param x a `numeric` vector</span></span>
+<span id="cb20-6"><a href=""></a><span class="co">#'</span></span>
+<span id="cb20-7"><a href=""></a><span class="co">#' @return A `numeric` value representing the arithmetic mean of `x`.</span></span>
+<span id="cb20-8"><a href=""></a><span class="co">#'</span></span>
+<span id="cb20-9"><a href=""></a><span class="co">#' @export</span></span>
+<span id="cb20-10"><a href=""></a><span class="co">#'</span></span>
+<span id="cb20-11"><a href=""></a><span class="co">#' @examples</span></span>
+<span id="cb20-12"><a href=""></a><span class="co">#' x &lt;- 1:10</span></span>
+<span id="cb20-13"><a href=""></a><span class="co">#' arithmetic_mean(x)</span></span>
+<span id="cb20-14"><a href=""></a></span>
+<span id="cb20-15"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb20-16"><a href=""></a>  </span>
+<span id="cb20-17"><a href=""></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb20-18"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<p><br><br></p>
+<p>Then, run <strong><code>devtools::document()</code></strong> to automatically generate <code>.Rd</code> files in <code>man/</code> and the <code>NAMESPACE</code> file</p>
+</div></div>
+</section>
+<section id="the-description-file" class="slide level2">
+<h2>The <code>DESCRIPTION</code> file</h2>
+<p>Main component of an <i class="fa-brands fa-r-project" aria-label="r-project"></i> package, the <code>DESCRIPTION</code> file describes <strong>package metadata</strong>.</p>
+<p><br></p>
+<pre><code>Package: nameofthepackage
+Type: Package
+Title: The Title of the Package
+Authors@R: c(
+    person(given   = "John",
+           family  = "Doe",
+           role    = c("aut", "cre", "cph"),
+           email   = "john.doe@domain.com",
+           comment = c(ORCID = "9999-9999-9999-9999")))
+Description: A paragraph providing a full description of 
+    the package.
+License: GPL (&gt;= 2)</code></pre>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>External packages</strong> required by the package will be listed in this file.</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/forcis-repo.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column center" style="width:25%;">
+<p><i class="fa-solid fa-database" aria-label="database"></i></p>
+<div class="small">
+<p><strong>Database</strong> hosted on<br><a href="https://zenodo.org/records/12724286"><strong>Zenodo</strong></a></p>
+</div>
+</div><div class="column center" style="width:25%;">
+<p><i class="fa-solid fa-file-lines" aria-label="file-lines"></i></p>
+<div class="small">
+<p><strong>Data paper</strong> published in<br><a href="https://www.nature.com/articles/s41597-023-02264-2"><strong>Scientific Data</strong></a></p>
+</div>
+</div><div class="column center" style="width:25%;">
+<p><i class="fa-solid fa-cube" aria-label="cube"></i></p>
+<div class="small">
+<p><strong>Package</strong> hosted on <a href="https://github.com/frbcesab/forcis"><strong>GitHub</strong></a><br>(coming soon on the CRAN)</p>
+</div>
+</div><div class="column center" style="width:25%;">
+<p><i class="fa-solid fa-file-lines" aria-label="file-lines"></i></p>
+<div class="small">
+<p><strong>Software paper</strong> submitted at<br>Methods in Ecology and Evolution</p>
+</div>
+</div></div>
+</section>
+<section id="must-read-resources" class="slide level2">
+<h2>Must-read resources</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://r-pkgs.org/"><img data-src="images/r-pkg.jpg" style="width:65.0%"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html"><img data-src="images/r-ext.png" style="width:61.0%"></a></p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="small"><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<a href="https://r-pkgs.org/" class="uri">https://r-pkgs.org/</a></span></p>
+</div><div class="column" style="width:50%;">
+<p><span class="small"><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html" class="uri">https://cran.r-project.org/doc/manuals/r-release/R-exts.html</a></span></p>
+</div></div>
 <!-- Insert section 'Shiny App' -->
 </section></section>
 <section>
@@ -468,6 +1364,7 @@ Author name<br/>
 </div>
 </div>
 </section></section>
+
     </div>
   </div>
 
