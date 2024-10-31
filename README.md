@@ -4,9 +4,9 @@
   <br>
   <img src="images/readme/logo-readme.png" alt="Logo" width="200">
   <br>
-  Sharing data and more
+  Sharing code & tools
   <br>
-  Shiny apps, websites and R packages
+  Research compendium, R Package & Shiny App
   <br>
 </h1>
 
@@ -82,7 +82,7 @@ To understand the file organisation of this repository, please read this [Wiki](
 
 ## Citation
 
-Casajus N (2024) Sharing data and more. Online presentation available at <https://github.com/biodiversitydata/data-sharing/>.
+Casajus N (2024) Biodiversity data: Sharing code & tools. Online presentation available at <https://github.com/biodiversitydata/data-sharing/>.
 
 
 ## Contributing
