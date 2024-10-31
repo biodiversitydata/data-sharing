@@ -409,7 +409,7 @@
 <p>Sharing code &amp; tools</p>
 </div>
 <div class="subtitle">
-<p>Research compendium, R package, Shiny App &amp; website</p>
+<p>Research compendium, R Package &amp; Shiny App</p>
 </div>
 <div class="date">
 <p>October 2024</p>
@@ -485,13 +485,12 @@ Author name<br/>
 <div class="column center" style="width:20%;">
 
 </div><div class="column center" style="width:20%;">
+
+</div><div class="column center" style="width:20%;">
 <p><i class="fa-solid fa-globe fa-2x" aria-label="globe"></i></p>
 <p>Shiny App</p>
 </div><div class="column center" style="width:20%;">
 
-</div><div class="column center" style="width:20%;">
-<p><i class="fa-solid fa-expand fa-2x" aria-label="expand"></i></p>
-<p>Others</p>
 </div><div class="column center" style="width:20%;">
 
 </div></div>
@@ -968,10 +967,10 @@ Author name<br/>
 </div>
 <div class="fragment">
 <p><br></p>
-<p>As of today (2024-10-30):</p>
+<p>As of today (2024-10-31):</p>
 <ul>
-<li><strong>21586</strong> packages are available on the <a href="https://cran.r-project.org"><code>CRAN</code></a></li>
-<li><strong>2300</strong> packages on <code>Bioconductor</code></li>
+<li><strong>21585</strong> packages are available on the <a href="https://cran.r-project.org"><code>CRAN</code></a></li>
+<li><strong>2289</strong> packages on <code>Bioconductor</code></li>
 </ul>
 </div>
 </section>
@@ -1344,26 +1343,265 @@ License: GPL (&gt;= 2)</code></pre>
 <h1><i class="fa-solid fa-globe fa-1x" aria-label="globe"></i> &nbsp;&nbsp;Shiny App</h1>
 
 </section>
-<section id="shiny-app-1" class="slide level2">
-<h2>Shiny App</h2>
-<p>Coming soon…</p>
-<!-- Insert section 'Others' -->
-</section></section>
-<section>
-<section id="others" class="title-slide slide level1 center">
-<h1><i class="fa-solid fa-expand fa-1x" aria-label="expand"></i> &nbsp;&nbsp;Others</h1>
-
+<section id="shiny-package" class="slide level2">
+<h2><code>shiny</code> package</h2>
+<blockquote>
+<p>Shiny is an <i class="fa-brands fa-r-project" aria-label="r-project"></i> package that makes it easy to <strong>build interactive web applications</strong> (apps) straight from <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
+</blockquote>
+<div class="citation">
+<p>Source: <a href="https://mastering-shiny.org/preface.html">Mastering Shiny</a></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Provides a curated set of <strong>user interface</strong> (UI) functions that generate the HTML, CSS, and JavaScript needed for common tasks.</p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;No knowledge of HTML, CSS, or JavaScript required</p></li>
+</ul>
+</div>
+<div class="fragment">
+<p><br></p>
+<ul>
+<li><p>Introduces a new style of programming called <strong>reactive programming</strong> which automatically tracks the dependencies of pieces of code.</p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;Automatically update output if input changes</p></li>
+</ul>
+</div>
 </section>
-<section id="others-1" class="slide level2">
-<h2>Others</h2>
-<p>Coming soon…</p>
+<section id="shiny-package-1" class="slide level2">
+<h2><code>shiny</code> package</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/shiny-repo.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<p>Available at: <a href="https://github.com/rstudio/shiny/" class="uri">https://github.com/rstudio/shiny/</a></p>
+</section>
+<section id="structure-of-a-shiny-app" class="slide level2">
+<h2>Structure of a Shiny App</h2>
+<p>A Shiny app is contained in a single script called <strong><code>app.R</code></strong> and has three components:</p>
+<ul>
+<li>a <strong><code>ui</code></strong> (user interface) object</li>
+<li>a <strong><code>server()</code></strong> function</li>
+<li>a call to the <strong><code>shinyApp()</code></strong> function</li>
+</ul>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="do">## Required package ----</span></span>
+<span id="cb22-2"><a href=""></a></span>
+<span id="cb22-3"><a href=""></a><span class="fu">library</span>(shiny)</span>
+<span id="cb22-4"><a href=""></a></span>
+<span id="cb22-5"><a href=""></a></span>
+<span id="cb22-6"><a href=""></a><span class="do">## User interface ----</span></span>
+<span id="cb22-7"><a href=""></a></span>
+<span id="cb22-8"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="er">*</span>(</span>
+<span id="cb22-9"><a href=""></a>  ...</span>
+<span id="cb22-10"><a href=""></a>)</span>
+<span id="cb22-11"><a href=""></a></span>
+<span id="cb22-12"><a href=""></a></span>
+<span id="cb22-13"><a href=""></a><span class="do">## Server component ----</span></span>
+<span id="cb22-14"><a href=""></a></span>
+<span id="cb22-15"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb22-16"><a href=""></a>  ...</span>
+<span id="cb22-17"><a href=""></a>}</span>
+<span id="cb22-18"><a href=""></a></span>
+<span id="cb22-19"><a href=""></a></span>
+<span id="cb22-20"><a href=""></a><span class="do">## Create Shiny app object ----</span></span>
+<span id="cb22-21"><a href=""></a></span>
+<span id="cb22-22"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+
+</div></div>
+</section>
+<section id="structure-of-a-shiny-app-1" class="slide level2">
+<h2>Structure of a Shiny App</h2>
+<p>A Shiny app is contained in a single script called <strong><code>app.R</code></strong> and has three components:</p>
+<ul>
+<li>a <strong><code>ui</code></strong> (user interface) object</li>
+<li>a <strong><code>server()</code></strong> function</li>
+<li>a call to the <strong><code>shinyApp()</code></strong> function</li>
+</ul>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="do">## Required package ----</span></span>
+<span id="cb23-2"><a href=""></a></span>
+<span id="cb23-3"><a href=""></a><span class="fu">library</span>(shiny)</span>
+<span id="cb23-4"><a href=""></a></span>
+<span id="cb23-5"><a href=""></a></span>
+<span id="cb23-6"><a href=""></a><span class="do">## User interface ----</span></span>
+<span id="cb23-7"><a href=""></a></span>
+<span id="cb23-8"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="er">*</span>(</span>
+<span id="cb23-9"><a href=""></a>  ...</span>
+<span id="cb23-10"><a href=""></a>)</span>
+<span id="cb23-11"><a href=""></a></span>
+<span id="cb23-12"><a href=""></a></span>
+<span id="cb23-13"><a href=""></a><span class="do">## Server component ----</span></span>
+<span id="cb23-14"><a href=""></a></span>
+<span id="cb23-15"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb23-16"><a href=""></a>  ...</span>
+<span id="cb23-17"><a href=""></a>}</span>
+<span id="cb23-18"><a href=""></a></span>
+<span id="cb23-19"><a href=""></a></span>
+<span id="cb23-20"><a href=""></a><span class="do">## Create Shiny app object ----</span></span>
+<span id="cb23-21"><a href=""></a></span>
+<span id="cb23-22"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<p><br><br><br><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="do">## Launch the Shiny app ----</span></span>
+<span id="cb24-2"><a href=""></a></span>
+<span id="cb24-3"><a href=""></a><span class="fu">runApp</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+</section>
+<section id="ui-components" class="slide level2">
+<h2>UI Components</h2>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/components.png" class="quarto-figure quarto-figure-left" style="width:65.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;More information <a href="https://shiny.posit.co/r/components/"><strong>here</strong></a></p>
+</section>
+<section id="ui-layouts" class="slide level2">
+<h2>UI Layouts</h2>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/layouts.png" class="quarto-figure quarto-figure-left" style="width:65.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;More information <a href="https://shiny.posit.co/r/layouts/"><strong>here</strong></a></p>
+</section>
+<section id="reactive-programming" class="slide level2">
+<h2>Reactive programming</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/shiny-reactive.png" style="width:30.0%"></p>
+<figcaption>Graph of dependencies</figcaption>
+</figure>
+</div>
+<p><br></p>
+<ul>
+<li>User interacts with UI <strong>inputs</strong> (click a button, enter text, select an option, etc.)</li>
+<li>The <strong>server</strong> handles input changes and modifies the output value</li>
+<li>The server updates the UI <strong>output</strong></li>
+</ul>
+</section>
+<section id="minimal-shiny-app" class="slide level2">
+<h2>Minimal Shiny app</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="do">## User interface ----</span></span>
+<span id="cb25-2"><a href=""></a></span>
+<span id="cb25-3"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb25-4"><a href=""></a></span>
+<span id="cb25-5"><a href=""></a>    <span class="co"># Application title</span></span>
+<span id="cb25-6"><a href=""></a>    <span class="fu">titlePanel</span>(<span class="st">"Old Faithful Geyser Data"</span>),</span>
+<span id="cb25-7"><a href=""></a></span>
+<span id="cb25-8"><a href=""></a>    <span class="co"># Sidebar with a slider input for number of bins </span></span>
+<span id="cb25-9"><a href=""></a>    <span class="fu">sidebarLayout</span>(</span>
+<span id="cb25-10"><a href=""></a>        <span class="fu">sidebarPanel</span>(</span>
+<span id="cb25-11"><a href=""></a>            <span class="fu">sliderInput</span>(<span class="st">"bins"</span>,</span>
+<span id="cb25-12"><a href=""></a>                        <span class="st">"Number of bins:"</span>,</span>
+<span id="cb25-13"><a href=""></a>                        <span class="at">min   =</span> <span class="dv">1</span>,</span>
+<span id="cb25-14"><a href=""></a>                        <span class="at">max   =</span> <span class="dv">50</span>,</span>
+<span id="cb25-15"><a href=""></a>                        <span class="at">value =</span> <span class="dv">30</span></span>
+<span id="cb25-16"><a href=""></a>            )</span>
+<span id="cb25-17"><a href=""></a>        ),</span>
+<span id="cb25-18"><a href=""></a></span>
+<span id="cb25-19"><a href=""></a>        <span class="co"># Show a plot of the generated distribution</span></span>
+<span id="cb25-20"><a href=""></a>        <span class="fu">mainPanel</span>(</span>
+<span id="cb25-21"><a href=""></a>           <span class="fu">plotOutput</span>(<span class="st">"distPlot"</span>)</span>
+<span id="cb25-22"><a href=""></a>        )</span>
+<span id="cb25-23"><a href=""></a>    )</span>
+<span id="cb25-24"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="do">## Server logic ----</span></span>
+<span id="cb26-2"><a href=""></a></span>
+<span id="cb26-3"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb26-4"><a href=""></a></span>
+<span id="cb26-5"><a href=""></a>    output<span class="sc">$</span>distPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb26-6"><a href=""></a>      </span>
+<span id="cb26-7"><a href=""></a>        <span class="co"># Generate bins based on input$bins</span></span>
+<span id="cb26-8"><a href=""></a>        x    <span class="ot">&lt;-</span> faithful[, <span class="dv">2</span>]</span>
+<span id="cb26-9"><a href=""></a>        bins <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), <span class="at">length.out =</span> input<span class="sc">$</span>bins <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb26-10"><a href=""></a></span>
+<span id="cb26-11"><a href=""></a>        <span class="co"># Draw the histogram with the specified number of bins</span></span>
+<span id="cb26-12"><a href=""></a>        <span class="fu">hist</span>(x, <span class="at">breaks =</span> bins, <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">border =</span> <span class="st">'white'</span>,</span>
+<span id="cb26-13"><a href=""></a>             <span class="at">xlab =</span> <span class="st">'Waiting time to next eruption (in mins)'</span>,</span>
+<span id="cb26-14"><a href=""></a>             <span class="at">main =</span> <span class="st">'Histogram of waiting times'</span>)</span>
+<span id="cb26-15"><a href=""></a>    })</span>
+<span id="cb26-16"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="do">## Create the application ----</span></span>
+<span id="cb27-2"><a href=""></a></span>
+<span id="cb27-3"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p><br></p>
+<div class="small">
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;RStudio IDE: <code>New Project &gt; New Directory &gt; Shiny Application</code></p>
+</div>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/bioclimatic-atlas.png" style="width:90.0%"></p>
+<div class="small">
+<p><i class="fa-solid fa-code" aria-label="code"></i> &nbsp;<a href="https://github.com/ahasverus/bioclimatic-atlas/" class="uri">https://github.com/ahasverus/bioclimatic-atlas/</a> <br> <i class="fa-solid fa-globe" aria-label="globe"></i> &nbsp;&nbsp;<a href="https://ahasverus.shinyapps.io/bioclimaticatlas/" class="uri">https://ahasverus.shinyapps.io/bioclimaticatlas/</a></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/zeplacetobe.png" style="width:90.0%"></p>
+<div class="small">
+<p><i class="fa-solid fa-code" aria-label="code"></i> &nbsp;<a href="https://github.com/ahasverus/zeplacetobe/" class="uri">https://github.com/ahasverus/zeplacetobe/</a> <br> <i class="fa-solid fa-globe" aria-label="globe"></i> &nbsp;&nbsp;<a href="https://ahasverus.shinyapps.io/zeplacetobe/" class="uri">https://ahasverus.shinyapps.io/zeplacetobe/</a></p>
+</div>
+</div></div>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<a href="https://shiny.posit.co/"><strong>Shiny website</strong></a></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/shiny-cover.png" style="width:50.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/engineering-shiny.jpeg" style="width:43.0%"></p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="small"><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<a href="https://mastering-shiny.org/" class="uri">https://mastering-shiny.org/</a></span></p>
+</div><div class="column" style="width:50%;">
+<p><span class="small"><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<a href="https://engineering-shiny.org/" class="uri">https://engineering-shiny.org/</a></span></p>
+</div></div>
+</section></section>
+<section id="thanks" class="title-slide slide level1 center">
+<h1>Thanks</h1>
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo-affiliation.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><i class="fa-brands fa-github" aria-label="github"></i> &nbsp;<a href="https://github.com/biodiversitydata/data-sharing"><code>biodiversitydata/data-sharing</code></a> &nbsp; • &nbsp; <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> &nbsp;<a href="https://creativecommons.org/licenses/by/4.0/deed.en"><code>cc-by-4.0</code></a></p>
 </div>
 </div>
-</section></section>
+</section>
+
 
     </div>
   </div>
