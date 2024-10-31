@@ -49,9 +49,3 @@ engine: knitr
 #| child: "sections/shiny-app.qmd"
 ```
 
-<!-- Insert section 'Others' -->
-
-```{r}
-#| child: "sections/others.qmd"
-```
-

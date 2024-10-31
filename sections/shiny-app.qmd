@@ -1,7 +1,343 @@
 # {{< fa globe size=1x >}} &nbsp;&nbsp;Shiny App
 
 
+## `shiny` package
 
-## Shiny App
+> Shiny is an {{< fa brands r-project >}} package that makes it easy to **build interactive web applications** (apps) straight from {{< fa brands r-project >}}.
 
-Coming soon...
+::: {.citation}
+Source: [Mastering Shiny](https://mastering-shiny.org/preface.html)
+:::
+
+. . .
+
+
+<br/>
+
+
+**Features**
+
+- Provides a curated set of **user interface** (UI) functions that generate the HTML, CSS, and JavaScript needed for common tasks.
+
+  {{< fa circle-right >}} &nbsp;No knowledge of HTML, CSS, or JavaScript required
+
+. . .
+
+<br/>
+
+- Introduces a new style of programming called **reactive programming** which automatically tracks the dependencies of pieces of code.
+
+  {{< fa circle-right >}} &nbsp;Automatically update output if input changes
+
+
+## `shiny` package
+
+![](images/shiny-repo.png){width=50% fig-align='center'}
+
+<br/>
+
+Available at: <https://github.com/rstudio/shiny/>
+
+
+
+## Structure of a Shiny App
+
+A Shiny app is contained in a single script called **`app.R`** and has three components:
+
+- a **`ui`** (user interface) object
+- a **`server()`** function
+- a call to the **`shinyApp()`** function
+
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Required package ----
+
+library(shiny)
+
+
+## User interface ----
+
+ui <- *(
+  ...
+)
+
+
+## Server component ----
+
+server <- function(input, output) {
+  ...
+}
+
+
+## Create Shiny app object ----
+
+shinyApp(ui = ui, server = server)
+
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+:::
+
+::::
+
+
+
+
+## Structure of a Shiny App
+
+A Shiny app is contained in a single script called **`app.R`** and has three components:
+
+- a **`ui`** (user interface) object
+- a **`server()`** function
+- a call to the **`shinyApp()`** function
+
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=45%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Required package ----
+
+library(shiny)
+
+
+## User interface ----
+
+ui <- *(
+  ...
+)
+
+
+## Server component ----
+
+server <- function(input, output) {
+  ...
+}
+
+
+## Create Shiny app object ----
+
+shinyApp(ui = ui, server = server)
+
+```
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=45%}
+<br/><br/><br/><br/>
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Launch the Shiny app ----
+
+runApp()
+```
+
+:::
+
+::::
+
+
+## UI Components
+
+![](images/components.png){width=65% fig-align='left'}
+
+<br/>
+
+{{< fa circle-right >}} &nbsp;More information [**here**](https://shiny.posit.co/r/components/)
+
+
+
+
+## UI Layouts
+
+![](images/layouts.png){width=65% fig-align='left'}
+
+<br/>
+
+{{< fa circle-right >}} &nbsp;More information [**here**](https://shiny.posit.co/r/layouts/)
+
+
+
+
+
+
+## Reactive programming
+
+
+![Graph of dependencies](images/shiny-reactive.png){width=30% fig-align='center'}
+
+
+<br/>
+
+- User interacts with UI **inputs** (click a button, enter text, select an option, etc.)
+- The **server** handles input changes and modifies the output value
+- The server updates the UI **output**
+
+
+
+## Minimal Shiny app
+
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r}
+#| echo: true
+#| eval: false
+
+## User interface ----
+
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("Old Faithful Geyser Data"),
+
+    # Sidebar with a slider input for number of bins 
+    sidebarLayout(
+        sidebarPanel(
+            sliderInput("bins",
+                        "Number of bins:",
+                        min   = 1,
+                        max   = 50,
+                        value = 30
+            )
+        ),
+
+        # Show a plot of the generated distribution
+        mainPanel(
+           plotOutput("distPlot")
+        )
+    )
+)
+```
+:::
+
+
+::: {.column width=50%}
+```{r}
+#| echo: true
+#| eval: false
+
+## Server logic ----
+
+server <- function(input, output) {
+
+    output$distPlot <- renderPlot({
+      
+        # Generate bins based on input$bins
+        x    <- faithful[, 2]
+        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+
+        # Draw the histogram with the specified number of bins
+        hist(x, breaks = bins, col = 'darkgray', border = 'white',
+             xlab = 'Waiting time to next eruption (in mins)',
+             main = 'Histogram of waiting times')
+    })
+}
+```
+
+<br/>
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Create the application ----
+
+shinyApp(ui = ui, server = server)
+```
+:::
+
+::::
+
+
+<br/>
+
+::: {.small}
+{{< fa circle-right >}} &nbsp;RStudio IDE: `New Project > New Directory > Shiny Application`
+:::
+
+
+
+## Examples
+
+:::: {.columns}
+
+::: {.column width=50%}
+![](images/bioclimatic-atlas.png){width=90%}
+
+::: {.small}
+{{< fa code >}} &nbsp;<https://github.com/ahasverus/bioclimatic-atlas/>
+<br/>
+{{< fa globe >}} &nbsp;&nbsp;<https://ahasverus.shinyapps.io/bioclimaticatlas/>
+:::
+
+:::
+
+::: {.column width=50%}
+![](images/zeplacetobe.png){width=90%}
+
+::: {.small}
+{{< fa code >}} &nbsp;<https://github.com/ahasverus/zeplacetobe/>
+<br/>
+{{< fa globe >}} &nbsp;&nbsp;<https://ahasverus.shinyapps.io/zeplacetobe/>
+:::
+:::
+
+::::
+
+
+
+## Resources
+
+{{< fa circle-right >}} &nbsp;[**Shiny website**](https://shiny.posit.co/)
+
+<br/>
+
+
+:::: {.columns}
+::: {.column width=50%}
+![](images/shiny-cover.png){width=50%}
+:::
+
+::: {.column width=50%}
+![](images/engineering-shiny.jpeg){width=43%}
+:::
+
+::::
+
+:::: {.columns}
+::: {.column width=50%}
+[{{< fa circle-right >}} &nbsp;<https://mastering-shiny.org/>]{.small}
+:::
+
+::: {.column width=50%}
+[{{< fa circle-right >}} &nbsp;<https://engineering-shiny.org/>]{.small}
+:::
+
+::::
+
+
+# Thanks

@@ -15,7 +15,7 @@ Sharing code & tools
 :::
 
 ::: {.subtitle}
-Research compendium, R package, Shiny App & website
+Research compendium, R Package & Shiny App
 :::
 
 ::: {.date}

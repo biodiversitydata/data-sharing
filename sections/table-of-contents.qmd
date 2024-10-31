@@ -45,16 +45,14 @@ R package
 :::
 
 ::: { .column .center width="20%"}
+:::
+
+::: { .column .center width="20%"}
 {{< fa globe size=2x >}}
 Shiny App
 :::
 
 ::: { .column .center width="20%"}
-:::
-
-::: { .column .center width="20%"}
-{{< fa expand size=2x >}}
-Others
 :::
 
 ::: { .column .center width="20%"}
