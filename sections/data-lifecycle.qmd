@@ -5,5 +5,5 @@
 
 ## Data lifecycle
 
-![](images/data-lifecycle-5.png){width=50% fig-align='center'}
+![](images/data-lifecycle-3_5.png){width=50% fig-align='center'}
 
