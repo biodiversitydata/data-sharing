@@ -82,7 +82,7 @@ To understand the file organisation of this repository, please read this [Wiki](
 
 ## Citation
 
-Casajus N (2024) Biodiversity data: Sharing code & tools. Online presentation available at <https://github.com/biodiversitydata/data-sharing/>.
+Casajus N (2025) Biodiversity data: Sharing code & tools. Online presentation available at <https://github.com/biodiversitydata/data-sharing/>.
 
 
 ## Contributing
