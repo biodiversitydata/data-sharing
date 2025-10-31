@@ -483,31 +483,39 @@ License: GPL (>= 2)
 :::: {.columns}
 
 ::: {.column .center width=25%}
+
 {{< fa database >}}
+
 ::: {.small}
 **Database** hosted on<br/>[**Zenodo**](https://zenodo.org/records/12724286)
 :::
 :::
 
 ::: {.column .center width=25%}
+
 {{< fa file-lines >}}
+
 ::: {.small}
 **Data paper** published in<br/>[**Scientific Data**](https://www.nature.com/articles/s41597-023-02264-2)
 :::
 :::
 
 ::: {.column .center width=25%}
+
 {{< fa cube >}}
+
 ::: {.small}
-**Package** hosted on [**GitHub**](https://github.com/frbcesab/forcis)<br/>(coming soon on the CRAN)
+**Package** hosted on<br/>[**GitHub**](https://github.com/ropensci/forcis), [**rOpenSci**](https://github.com/ropensci/forcis) & [CRAN](https://cran.r-project.org/web/packages/forcis/index.html)
 :::
 :::
 
 
 ::: {.column .center width=25%}
+
 {{< fa file-lines >}}
+
 ::: {.small}
-**Software paper** submitted at<br/>Methods in Ecology and Evolution
+**Software paper** published in<br/>[JOSS](https://joss.theoj.org/papers/10.21105/joss.09217)
 :::
 :::
 
