@@ -6,12 +6,12 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.10.19">
 
   <title>Data sharing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,16 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -98,7 +104,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-acd4c6f6173a03f0491efd971e37f44f.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2d4847b171f9e41c976035ae7191e487.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -214,7 +220,7 @@
 <p>Research compendium, R Package &amp; Shiny App</p>
 </div>
 <div class="date">
-<p>November 2025</p>
+<p>October 2026</p>
 </div>
 <div class="columns authors">
 <div class="column author" style="width:32%;">
@@ -312,9 +318,25 @@ Author name<br/>
 <!-- Insert section 'Introduction' -->
 </section></section>
 <section>
-<section id="introduction" class="title-slide slide level1 center">
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612072696768742d746f2d627261636b65742073697a653d3178203e7d7d-introduction" class="title-slide slide level1 center">
 <h1><i class="fa-solid fa-right-to-bracket fa-1x" aria-label="right-to-bracket"></i> &nbsp;&nbsp;Introduction</h1>
 
+</section>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>You released a new <strong>database</strong> (with metadata)</li>
+<li>You published a <strong>data paper</strong></li>
+</ul>
+<!-- New list -->
+<ul>
+<li>And you wrote a lot of code…</li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div></div>
 </section>
 <section id="introduction-1" class="slide level2">
 <h2>Introduction</h2>
@@ -328,6 +350,8 @@ Author name<br/>
 <ul>
 <li>And you wrote a lot of code…</li>
 </ul>
+<p><br></p>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
 </div><div class="column" style="width:50%;">
 
 </div></div>
@@ -347,30 +371,12 @@ Author name<br/>
 <p><br></p>
 <p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
 </div><div class="column" style="width:50%;">
-
-</div></div>
-</section>
-<section id="introduction-3" class="slide level2">
-<h2>Introduction</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>You released a new <strong>database</strong> (with metadata)</li>
-<li>You published a <strong>data paper</strong></li>
-</ul>
-<!-- New list -->
-<ul>
-<li>And you wrote a lot of code…</li>
-</ul>
-<p><br></p>
-<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp; <strong>Why not sharing your code?</strong></p>
-</div><div class="column" style="width:50%;">
 <p><img data-src="images/pipeline-1.png"></p>
 <p><br></p>
 <p>Share your code to <strong>reproduce your pipeline</strong></p>
 </div></div>
 </section>
-<section id="introduction-4" class="slide level2">
+<section id="introduction-3" class="slide level2">
 <h2>Introduction</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -390,7 +396,7 @@ Author name<br/>
 <p>Share your code to <strong>access data</strong></p>
 </div></div>
 </section>
-<section id="introduction-5" class="slide level2">
+<section id="introduction-4" class="slide level2">
 <h2>Introduction</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -419,12 +425,13 @@ Author name<br/>
 <p><br></p>
 <p><strong>Services</strong></p>
 <ul>
-<li>Full integration of version control (commits, history, differences)</li>
-<li>Easy collaboration w/ branches, forks, pull requests</li>
-<li>Issues tracking system</li>
-<li>Enhanced documentation rendering (README, Wiki)</li>
-<li>Static website hosting</li>
+<li>Full integration of <strong>version control</strong> (commits, history, differences)</li>
+<li>Easy <strong>collaboration</strong> w/ branches, forks, pull requests</li>
+<li><strong>Issues</strong> tracking system</li>
+<li>Enhanced <strong>documentation rendering</strong> (README, Wiki)</li>
+<li>Static <strong>website hosting</strong></li>
 <li>Automation &amp; monitoring (CI/CD)</li>
+<li>AI assitance</li>
 </ul>
 </div><div class="column center" style="width:40%;">
 <p><br><br></p>
@@ -433,12 +440,14 @@ Author name<br/>
 </section>
 <section id="code-hosting-platforms-1" class="slide level2">
 <h2>Code hosting platforms</h2>
-<p><strong>Main platforms</strong></p>
+<p><br><br></p>
 <div class="columns">
-<div class="column center" style="width:50%;">
-<p><img data-src="images/github-logo.png" style="width:25.0%"> <br> <a href="https://github.com/"><strong>GitHub</strong></a> <br> <span class="small"><em>Microsoft</em></span></p>
-</div><div class="column center" style="width:50%;">
-<p><img data-src="images/gitlab-logo.png" style="width:25.0%"> <br> <a href="https://gitlab.com/"><strong>GitLab</strong></a> <br> <span class="small"><em>Open source</em></span></p>
+<div class="column center" style="width:33%;">
+<p><img data-src="images/github-logo.png" style="width:25.0%"> <br> <a href="https://github.com/"><strong>GitHub</strong></a> <br> <span class="small"><em>Propriétaire (Microsoft)</em><br><em>USA</em></span></p>
+</div><div class="column center" style="width:33%;">
+<p><img data-src="images/gitlab-logo.png" style="width:25.0%"> <br> <a href="https://gitlab.com/"><strong>GitLab</strong></a> <br> <span class="small"><em>Open source (MIT)</em><br><em>USA</em></span></p>
+</div><div class="column center" style="width:33%;">
+<p><img data-src="images/codeberg-logo.png" style="width:25.0%"> <br> <a href="https://codeberg.org/"><strong>Codeberg</strong></a> <br> <span class="small"><em>Open source (GPL &gt;= 3.0)</em><br><em>Germany</em></span></p>
 </div></div>
 <p><br><br><br><br></p>
 <p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>GitHub account</strong>: <a href="https://github.com/ahasverus/" class="uri">https://github.com/ahasverus/</a></p>
@@ -446,11 +455,11 @@ Author name<br/>
 <!-- Insert section 'Shiny App' -->
 </section></section>
 <section>
-<section id="research-compendium" class="title-slide slide level1 center">
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722073697a653d3178203e7d7d-research-compendium" class="title-slide slide level1 center">
 <h1><i class="fa-solid fa-folder fa-1x" aria-label="folder"></i> &nbsp;&nbsp;Research compendium</h1>
 
 </section>
-<section id="research-compendium-1" class="slide level2">
+<section id="research-compendium" class="slide level2">
 <h2>Research compendium</h2>
 <blockquote>
 <p>The goal of a research compendium is to provide a <strong><em>standard</em></strong> and easily recognisable way for <strong><em>organizing the digital materials</em></strong> of a project to enable others to <strong><em>inspect</em></strong>, <strong><em>reproduce</em></strong>, and <strong><em>extend the research</em></strong>.</p>
@@ -480,7 +489,7 @@ Author name<br/>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;A research compendium should be <strong>self-contained</strong></p>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://doi.org/10.7287/peerj.preprints.3192v2" class="uri">https://doi.org/10.7287/peerj.preprints.3192v2</a></p></li></ol></aside></section>
-<section id="research-compendium-2" class="slide level2">
+<section id="research-compendium-1" class="slide level2">
 <h2>Research compendium</h2>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;Strong flexibility in the structure of a compendium</p>
 <div class="columns">
@@ -507,7 +516,7 @@ Author name<br/>
 
 </div></div>
 </section>
-<section id="research-compendium-3" class="slide level2">
+<section id="research-compendium-2" class="slide level2">
 <h2>Research compendium</h2>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;Strong flexibility in the structure of a compendium</p>
 <div class="columns">
@@ -559,7 +568,7 @@ Author name<br/>
 
 </div></div>
 </section>
-<section id="research-compendium-4" class="slide level2">
+<section id="research-compendium-3" class="slide level2">
 <h2>Research compendium</h2>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i> &nbsp;Strong flexibility in the structure of a compendium</p>
 <div class="columns">
@@ -662,7 +671,7 @@ Author name<br/>
 <div class="column" style="width:60%;">
 <p>A <a href="https://en.wikipedia.org/wiki/README"><code>README</code></a> is a text file that introduces and explains your project</p>
 <ul>
-<li>each research compendium should contain a <code>README</code></li>
+<li>each project should contain a <code>README</code></li>
 <li>you can write different <code>README</code> (project, data, etc.)</li>
 </ul>
 </div><div class="column" style="width:40%;">
@@ -680,7 +689,7 @@ Author name<br/>
 <div class="column" style="width:60%;">
 <p>A <a href="https://en.wikipedia.org/wiki/README"><code>README</code></a> is a text file that introduces and explains your project</p>
 <ul>
-<li>each research compendium should contain a <code>README</code></li>
+<li>each project should contain a <code>README</code></li>
 <li>you can write different <code>README</code> (project, data, etc.)</li>
 </ul>
 <p><br></p>
@@ -700,7 +709,7 @@ Author name<br/>
 <div class="column" style="width:60%;">
 <p>A <a href="https://en.wikipedia.org/wiki/README"><code>README</code></a> is a text file that introduces and explains your project</p>
 <ul>
-<li>each research compendium should contain a <code>README</code></li>
+<li>each project should contain a <code>README</code></li>
 <li>you can write different <code>README</code> (project, data, etc.)</li>
 </ul>
 <p><br></p>
@@ -756,7 +765,7 @@ Author name<br/>
 <!-- Insert section 'R package' -->
 <aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://r-pkgs.org/other-markdown.html#sec-readme" class="uri">https://r-pkgs.org/other-markdown.html#sec-readme</a></p></li></ol></aside></section></section>
 <section>
-<section id="r-package" class="title-slide slide level1 center">
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120637562652073697a653d3178203e7d7d-r-package" class="title-slide slide level1 center">
 <h1><i class="fa-solid fa-cube fa-1x" aria-label="cube"></i> &nbsp;&nbsp;R package</h1>
 
 </section>
@@ -779,20 +788,38 @@ Author name<br/>
 </div>
 <div class="fragment">
 <p><br></p>
-<p>As of today (2025-11-02):</p>
+<p>As of today (2026-10-22):</p>
 <ul>
-<li><strong>23003</strong> packages are available on the <a href="https://cran.r-project.org"><code>CRAN</code></a></li>
-<li><strong>2361</strong> packages on <code>Bioconductor</code></li>
+<li><strong>25460</strong> packages are available on the <a href="https://cran.r-project.org"><code>CRAN</code></a></li>
+<li><strong>2431</strong> packages on <code>Bioconductor</code></li>
 </ul>
 </div>
 </section>
 <section id="recommended-environment" class="slide level2">
 <h2>Recommended environment</h2>
-<div class="quarto-figure quarto-figure-center">
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/pkg-environment.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
+<p><img data-src="images/pkg-environment.png" class="quarto-figure quarto-figure-left" style="width:80.0%"></p>
 </figure>
 </div>
+</div><div class="column" style="width:18%;">
+<p><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<ul>
+<li><strong>A code formatter</strong></li>
+</ul>
+<p>Suggestion: <a href="https://posit-dev.github.io/air/"><strong><code>Air</code></strong></a></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:18%;">
+<p><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<ul>
+<li><strong>A linter</strong></li>
+</ul>
+<p>Suggestion: <a href="https://jarl.etiennebacher.com/"><strong><code>Jarl</code></strong></a></p>
+</div></div>
 </section>
 <section id="development-workflow" class="slide level2">
 <h2>Development workflow</h2>
@@ -872,16 +899,16 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="do">## Function definition ----</span></span>
-<span id="cb10-2"><a href=""></a></span>
-<span id="cb10-3"><a href=""></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(input) {</span>
-<span id="cb10-4"><a href=""></a>  </span>
-<span id="cb10-5"><a href=""></a>  <span class="co"># Code block</span></span>
-<span id="cb10-6"><a href=""></a>  <span class="co"># Code block</span></span>
-<span id="cb10-7"><a href=""></a>  <span class="co"># Code block</span></span>
-<span id="cb10-8"><a href=""></a>  </span>
-<span id="cb10-9"><a href=""></a>  <span class="fu">return</span>(output)</span>
-<span id="cb10-10"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="" aria-label="1"></a><span class="do">## Function definition ----</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a></span>
+<span id="cb10-3"><a href="" aria-label="3"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(input) {</span>
+<span id="cb10-4"><a href="" aria-label="4"></a>  </span>
+<span id="cb10-5"><a href="" aria-label="5"></a>  <span class="co"># Code block</span></span>
+<span id="cb10-6"><a href="" aria-label="6"></a>  <span class="co"># Code block</span></span>
+<span id="cb10-7"><a href="" aria-label="7"></a>  <span class="co"># Code block</span></span>
+<span id="cb10-8"><a href="" aria-label="8"></a>  </span>
+<span id="cb10-9"><a href="" aria-label="9"></a>  <span class="fu">return</span>(output)</span>
+<span id="cb10-10"><a href="" aria-label="10"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
@@ -899,14 +926,14 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="do">## Arithmetic mean ----</span></span>
-<span id="cb11-2"><a href=""></a></span>
-<span id="cb11-3"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb11-4"><a href=""></a>  </span>
-<span id="cb11-5"><a href=""></a>  y <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb11-6"><a href=""></a>  </span>
-<span id="cb11-7"><a href=""></a>  <span class="fu">return</span>(y)</span>
-<span id="cb11-8"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="" aria-label="1"></a><span class="do">## Arithmetic mean ----</span></span>
+<span id="cb11-2"><a href="" aria-label="2"></a></span>
+<span id="cb11-3"><a href="" aria-label="3"></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb11-4"><a href="" aria-label="4"></a>  </span>
+<span id="cb11-5"><a href="" aria-label="5"></a>  y <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb11-6"><a href="" aria-label="6"></a>  </span>
+<span id="cb11-7"><a href="" aria-label="7"></a>  <span class="fu">return</span>(y)</span>
+<span id="cb11-8"><a href="" aria-label="8"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
@@ -920,16 +947,16 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="do">## Function definition ----</span></span>
-<span id="cb12-2"><a href=""></a></span>
-<span id="cb12-3"><a href=""></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(input) {</span>
-<span id="cb12-4"><a href=""></a>  </span>
-<span id="cb12-5"><a href=""></a>  <span class="co"># Code block</span></span>
-<span id="cb12-6"><a href=""></a>  <span class="co"># Code block</span></span>
-<span id="cb12-7"><a href=""></a>  <span class="co"># Code block</span></span>
-<span id="cb12-8"><a href=""></a>  </span>
-<span id="cb12-9"><a href=""></a>  <span class="fu">return</span>(output)</span>
-<span id="cb12-10"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="" aria-label="1"></a><span class="do">## Function definition ----</span></span>
+<span id="cb12-2"><a href="" aria-label="2"></a></span>
+<span id="cb12-3"><a href="" aria-label="3"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(input) {</span>
+<span id="cb12-4"><a href="" aria-label="4"></a>  </span>
+<span id="cb12-5"><a href="" aria-label="5"></a>  <span class="co"># Code block</span></span>
+<span id="cb12-6"><a href="" aria-label="6"></a>  <span class="co"># Code block</span></span>
+<span id="cb12-7"><a href="" aria-label="7"></a>  <span class="co"># Code block</span></span>
+<span id="cb12-8"><a href="" aria-label="8"></a>  </span>
+<span id="cb12-9"><a href="" aria-label="9"></a>  <span class="fu">return</span>(output)</span>
+<span id="cb12-10"><a href="" aria-label="10"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
@@ -946,25 +973,25 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="do">## Arithmetic mean ----</span></span>
-<span id="cb13-2"><a href=""></a></span>
-<span id="cb13-3"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb13-4"><a href=""></a>  </span>
-<span id="cb13-5"><a href=""></a>  y <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb13-6"><a href=""></a>  </span>
-<span id="cb13-7"><a href=""></a>  <span class="fu">return</span>(y)</span>
-<span id="cb13-8"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-label="1"></a><span class="do">## Arithmetic mean ----</span></span>
+<span id="cb13-2"><a href="" aria-label="2"></a></span>
+<span id="cb13-3"><a href="" aria-label="3"></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb13-4"><a href="" aria-label="4"></a>  </span>
+<span id="cb13-5"><a href="" aria-label="5"></a>  y <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb13-6"><a href="" aria-label="6"></a>  </span>
+<span id="cb13-7"><a href="" aria-label="7"></a>  <span class="fu">return</span>(y)</span>
+<span id="cb13-8"><a href="" aria-label="8"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
 </div><div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="do">## Simplification ----</span></span>
-<span id="cb14-2"><a href=""></a></span>
-<span id="cb14-3"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb14-4"><a href=""></a>  </span>
-<span id="cb14-5"><a href=""></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb14-6"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="" aria-label="1"></a><span class="do">## Simplification ----</span></span>
+<span id="cb14-2"><a href="" aria-label="2"></a></span>
+<span id="cb14-3"><a href="" aria-label="3"></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb14-4"><a href="" aria-label="4"></a>  </span>
+<span id="cb14-5"><a href="" aria-label="5"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb14-6"><a href="" aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 <div class="fragment">
@@ -973,9 +1000,9 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="do">## Arithmetic mean ----</span></span>
-<span id="cb15-2"><a href=""></a></span>
-<span id="cb15-3"><a href=""></a><span class="fu">arithmetic_mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-label="1"></a><span class="do">## Arithmetic mean ----</span></span>
+<span id="cb15-2"><a href="" aria-label="2"></a></span>
+<span id="cb15-3"><a href="" aria-label="3"></a><span class="fu">arithmetic_mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6.25</code></pre>
 </div>
@@ -984,9 +1011,9 @@ Author name<br/>
 
 </div><div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="do">## Comparison ----</span></span>
-<span id="cb17-2"><a href=""></a></span>
-<span id="cb17-3"><a href=""></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="" aria-label="1"></a><span class="do">## Comparison ----</span></span>
+<span id="cb17-2"><a href="" aria-label="2"></a></span>
+<span id="cb17-3"><a href="" aria-label="3"></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6.25</code></pre>
 </div>
@@ -1014,24 +1041,24 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="co">#' Compute the arithmetic mean</span></span>
-<span id="cb19-2"><a href=""></a><span class="co">#'</span></span>
-<span id="cb19-3"><a href=""></a><span class="co">#' This function computes the arithmetic mean of a numeric variable.</span></span>
-<span id="cb19-4"><a href=""></a><span class="co">#'</span></span>
-<span id="cb19-5"><a href=""></a><span class="co">#' @param x a `numeric` vector</span></span>
-<span id="cb19-6"><a href=""></a><span class="co">#'</span></span>
-<span id="cb19-7"><a href=""></a><span class="co">#' @return A `numeric` value representing the arithmetic mean of `x`.</span></span>
-<span id="cb19-8"><a href=""></a><span class="co">#'</span></span>
-<span id="cb19-9"><a href=""></a><span class="co">#' @export</span></span>
-<span id="cb19-10"><a href=""></a><span class="co">#'</span></span>
-<span id="cb19-11"><a href=""></a><span class="co">#' @examples</span></span>
-<span id="cb19-12"><a href=""></a><span class="co">#' x &lt;- 1:10</span></span>
-<span id="cb19-13"><a href=""></a><span class="co">#' arithmetic_mean(x)</span></span>
-<span id="cb19-14"><a href=""></a></span>
-<span id="cb19-15"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb19-16"><a href=""></a>  </span>
-<span id="cb19-17"><a href=""></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb19-18"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="" aria-label="1"></a><span class="co">#' Compute the arithmetic mean</span></span>
+<span id="cb19-2"><a href="" aria-label="2"></a><span class="co">#'</span></span>
+<span id="cb19-3"><a href="" aria-label="3"></a><span class="co">#' This function computes the arithmetic mean of a numeric variable.</span></span>
+<span id="cb19-4"><a href="" aria-label="4"></a><span class="co">#'</span></span>
+<span id="cb19-5"><a href="" aria-label="5"></a><span class="co">#' @param x a `numeric` vector</span></span>
+<span id="cb19-6"><a href="" aria-label="6"></a><span class="co">#'</span></span>
+<span id="cb19-7"><a href="" aria-label="7"></a><span class="co">#' @return A `numeric` value representing the arithmetic mean of `x`.</span></span>
+<span id="cb19-8"><a href="" aria-label="8"></a><span class="co">#'</span></span>
+<span id="cb19-9"><a href="" aria-label="9"></a><span class="co">#' @export</span></span>
+<span id="cb19-10"><a href="" aria-label="10"></a><span class="co">#'</span></span>
+<span id="cb19-11"><a href="" aria-label="11"></a><span class="co">#' @examples</span></span>
+<span id="cb19-12"><a href="" aria-label="12"></a><span class="co">#' x &lt;- 1:10</span></span>
+<span id="cb19-13"><a href="" aria-label="13"></a><span class="co">#' arithmetic_mean(x)</span></span>
+<span id="cb19-14"><a href="" aria-label="14"></a></span>
+<span id="cb19-15"><a href="" aria-label="15"></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb19-16"><a href="" aria-label="16"></a>  </span>
+<span id="cb19-17"><a href="" aria-label="17"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb19-18"><a href="" aria-label="18"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 
@@ -1057,24 +1084,24 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="co">#' Compute the arithmetic mean</span></span>
-<span id="cb20-2"><a href=""></a><span class="co">#'</span></span>
-<span id="cb20-3"><a href=""></a><span class="co">#' This function computes the arithmetic mean of a numeric variable.</span></span>
-<span id="cb20-4"><a href=""></a><span class="co">#'</span></span>
-<span id="cb20-5"><a href=""></a><span class="co">#' @param x a `numeric` vector</span></span>
-<span id="cb20-6"><a href=""></a><span class="co">#'</span></span>
-<span id="cb20-7"><a href=""></a><span class="co">#' @return A `numeric` value representing the arithmetic mean of `x`.</span></span>
-<span id="cb20-8"><a href=""></a><span class="co">#'</span></span>
-<span id="cb20-9"><a href=""></a><span class="co">#' @export</span></span>
-<span id="cb20-10"><a href=""></a><span class="co">#'</span></span>
-<span id="cb20-11"><a href=""></a><span class="co">#' @examples</span></span>
-<span id="cb20-12"><a href=""></a><span class="co">#' x &lt;- 1:10</span></span>
-<span id="cb20-13"><a href=""></a><span class="co">#' arithmetic_mean(x)</span></span>
-<span id="cb20-14"><a href=""></a></span>
-<span id="cb20-15"><a href=""></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb20-16"><a href=""></a>  </span>
-<span id="cb20-17"><a href=""></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb20-18"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="" aria-label="1"></a><span class="co">#' Compute the arithmetic mean</span></span>
+<span id="cb20-2"><a href="" aria-label="2"></a><span class="co">#'</span></span>
+<span id="cb20-3"><a href="" aria-label="3"></a><span class="co">#' This function computes the arithmetic mean of a numeric variable.</span></span>
+<span id="cb20-4"><a href="" aria-label="4"></a><span class="co">#'</span></span>
+<span id="cb20-5"><a href="" aria-label="5"></a><span class="co">#' @param x a `numeric` vector</span></span>
+<span id="cb20-6"><a href="" aria-label="6"></a><span class="co">#'</span></span>
+<span id="cb20-7"><a href="" aria-label="7"></a><span class="co">#' @return A `numeric` value representing the arithmetic mean of `x`.</span></span>
+<span id="cb20-8"><a href="" aria-label="8"></a><span class="co">#'</span></span>
+<span id="cb20-9"><a href="" aria-label="9"></a><span class="co">#' @export</span></span>
+<span id="cb20-10"><a href="" aria-label="10"></a><span class="co">#'</span></span>
+<span id="cb20-11"><a href="" aria-label="11"></a><span class="co">#' @examples</span></span>
+<span id="cb20-12"><a href="" aria-label="12"></a><span class="co">#' x &lt;- 1:10</span></span>
+<span id="cb20-13"><a href="" aria-label="13"></a><span class="co">#' arithmetic_mean(x)</span></span>
+<span id="cb20-14"><a href="" aria-label="14"></a></span>
+<span id="cb20-15"><a href="" aria-label="15"></a>arithmetic_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb20-16"><a href="" aria-label="16"></a>  </span>
+<span id="cb20-17"><a href="" aria-label="17"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb20-18"><a href="" aria-label="18"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
@@ -1150,7 +1177,7 @@ License: GPL (&gt;= 2)</code></pre>
 <!-- Insert section 'Shiny App' -->
 </section></section>
 <section>
-<section id="shiny-app" class="title-slide slide level1 center">
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120676c6f62652073697a653d3178203e7d7d-shiny-app" class="title-slide slide level1 center">
 <h1><i class="fa-solid fa-globe fa-1x" aria-label="globe"></i> &nbsp;&nbsp;Shiny App</h1>
 
 </section>
@@ -1200,28 +1227,28 @@ License: GPL (&gt;= 2)</code></pre>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="do">## Required package ----</span></span>
-<span id="cb22-2"><a href=""></a></span>
-<span id="cb22-3"><a href=""></a><span class="fu">library</span>(shiny)</span>
-<span id="cb22-4"><a href=""></a></span>
-<span id="cb22-5"><a href=""></a></span>
-<span id="cb22-6"><a href=""></a><span class="do">## User interface ----</span></span>
-<span id="cb22-7"><a href=""></a></span>
-<span id="cb22-8"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="er">*</span>(</span>
-<span id="cb22-9"><a href=""></a>  ...</span>
-<span id="cb22-10"><a href=""></a>)</span>
-<span id="cb22-11"><a href=""></a></span>
-<span id="cb22-12"><a href=""></a></span>
-<span id="cb22-13"><a href=""></a><span class="do">## Server component ----</span></span>
-<span id="cb22-14"><a href=""></a></span>
-<span id="cb22-15"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<span id="cb22-16"><a href=""></a>  ...</span>
-<span id="cb22-17"><a href=""></a>}</span>
-<span id="cb22-18"><a href=""></a></span>
-<span id="cb22-19"><a href=""></a></span>
-<span id="cb22-20"><a href=""></a><span class="do">## Create Shiny app object ----</span></span>
-<span id="cb22-21"><a href=""></a></span>
-<span id="cb22-22"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="" aria-label="1"></a><span class="do">## Required package ----</span></span>
+<span id="cb22-2"><a href="" aria-label="2"></a></span>
+<span id="cb22-3"><a href="" aria-label="3"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb22-4"><a href="" aria-label="4"></a></span>
+<span id="cb22-5"><a href="" aria-label="5"></a></span>
+<span id="cb22-6"><a href="" aria-label="6"></a><span class="do">## User interface ----</span></span>
+<span id="cb22-7"><a href="" aria-label="7"></a></span>
+<span id="cb22-8"><a href="" aria-label="8"></a>ui <span class="ot">&lt;-</span> <span class="er">*</span>(</span>
+<span id="cb22-9"><a href="" aria-label="9"></a>  ...</span>
+<span id="cb22-10"><a href="" aria-label="10"></a>)</span>
+<span id="cb22-11"><a href="" aria-label="11"></a></span>
+<span id="cb22-12"><a href="" aria-label="12"></a></span>
+<span id="cb22-13"><a href="" aria-label="13"></a><span class="do">## Server component ----</span></span>
+<span id="cb22-14"><a href="" aria-label="14"></a></span>
+<span id="cb22-15"><a href="" aria-label="15"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb22-16"><a href="" aria-label="16"></a>  ...</span>
+<span id="cb22-17"><a href="" aria-label="17"></a>}</span>
+<span id="cb22-18"><a href="" aria-label="18"></a></span>
+<span id="cb22-19"><a href="" aria-label="19"></a></span>
+<span id="cb22-20"><a href="" aria-label="20"></a><span class="do">## Create Shiny app object ----</span></span>
+<span id="cb22-21"><a href="" aria-label="21"></a></span>
+<span id="cb22-22"><a href="" aria-label="22"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
@@ -1241,37 +1268,37 @@ License: GPL (&gt;= 2)</code></pre>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="do">## Required package ----</span></span>
-<span id="cb23-2"><a href=""></a></span>
-<span id="cb23-3"><a href=""></a><span class="fu">library</span>(shiny)</span>
-<span id="cb23-4"><a href=""></a></span>
-<span id="cb23-5"><a href=""></a></span>
-<span id="cb23-6"><a href=""></a><span class="do">## User interface ----</span></span>
-<span id="cb23-7"><a href=""></a></span>
-<span id="cb23-8"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="er">*</span>(</span>
-<span id="cb23-9"><a href=""></a>  ...</span>
-<span id="cb23-10"><a href=""></a>)</span>
-<span id="cb23-11"><a href=""></a></span>
-<span id="cb23-12"><a href=""></a></span>
-<span id="cb23-13"><a href=""></a><span class="do">## Server component ----</span></span>
-<span id="cb23-14"><a href=""></a></span>
-<span id="cb23-15"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<span id="cb23-16"><a href=""></a>  ...</span>
-<span id="cb23-17"><a href=""></a>}</span>
-<span id="cb23-18"><a href=""></a></span>
-<span id="cb23-19"><a href=""></a></span>
-<span id="cb23-20"><a href=""></a><span class="do">## Create Shiny app object ----</span></span>
-<span id="cb23-21"><a href=""></a></span>
-<span id="cb23-22"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="" aria-label="1"></a><span class="do">## Required package ----</span></span>
+<span id="cb23-2"><a href="" aria-label="2"></a></span>
+<span id="cb23-3"><a href="" aria-label="3"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb23-4"><a href="" aria-label="4"></a></span>
+<span id="cb23-5"><a href="" aria-label="5"></a></span>
+<span id="cb23-6"><a href="" aria-label="6"></a><span class="do">## User interface ----</span></span>
+<span id="cb23-7"><a href="" aria-label="7"></a></span>
+<span id="cb23-8"><a href="" aria-label="8"></a>ui <span class="ot">&lt;-</span> <span class="er">*</span>(</span>
+<span id="cb23-9"><a href="" aria-label="9"></a>  ...</span>
+<span id="cb23-10"><a href="" aria-label="10"></a>)</span>
+<span id="cb23-11"><a href="" aria-label="11"></a></span>
+<span id="cb23-12"><a href="" aria-label="12"></a></span>
+<span id="cb23-13"><a href="" aria-label="13"></a><span class="do">## Server component ----</span></span>
+<span id="cb23-14"><a href="" aria-label="14"></a></span>
+<span id="cb23-15"><a href="" aria-label="15"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb23-16"><a href="" aria-label="16"></a>  ...</span>
+<span id="cb23-17"><a href="" aria-label="17"></a>}</span>
+<span id="cb23-18"><a href="" aria-label="18"></a></span>
+<span id="cb23-19"><a href="" aria-label="19"></a></span>
+<span id="cb23-20"><a href="" aria-label="20"></a><span class="do">## Create Shiny app object ----</span></span>
+<span id="cb23-21"><a href="" aria-label="21"></a></span>
+<span id="cb23-22"><a href="" aria-label="22"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:10%;">
 
 </div><div class="column" style="width:45%;">
 <p><br><br><br><br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="do">## Launch the Shiny app ----</span></span>
-<span id="cb24-2"><a href=""></a></span>
-<span id="cb24-3"><a href=""></a><span class="fu">runApp</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="" aria-label="1"></a><span class="do">## Launch the Shiny app ----</span></span>
+<span id="cb24-2"><a href="" aria-label="2"></a></span>
+<span id="cb24-3"><a href="" aria-label="3"></a><span class="fu">runApp</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>
@@ -1315,55 +1342,55 @@ License: GPL (&gt;= 2)</code></pre>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="do">## User interface ----</span></span>
-<span id="cb25-2"><a href=""></a></span>
-<span id="cb25-3"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb25-4"><a href=""></a></span>
-<span id="cb25-5"><a href=""></a>    <span class="co"># Application title</span></span>
-<span id="cb25-6"><a href=""></a>    <span class="fu">titlePanel</span>(<span class="st">"Old Faithful Geyser Data"</span>),</span>
-<span id="cb25-7"><a href=""></a></span>
-<span id="cb25-8"><a href=""></a>    <span class="co"># Sidebar with a slider input for number of bins </span></span>
-<span id="cb25-9"><a href=""></a>    <span class="fu">sidebarLayout</span>(</span>
-<span id="cb25-10"><a href=""></a>        <span class="fu">sidebarPanel</span>(</span>
-<span id="cb25-11"><a href=""></a>            <span class="fu">sliderInput</span>(<span class="st">"bins"</span>,</span>
-<span id="cb25-12"><a href=""></a>                        <span class="st">"Number of bins:"</span>,</span>
-<span id="cb25-13"><a href=""></a>                        <span class="at">min   =</span> <span class="dv">1</span>,</span>
-<span id="cb25-14"><a href=""></a>                        <span class="at">max   =</span> <span class="dv">50</span>,</span>
-<span id="cb25-15"><a href=""></a>                        <span class="at">value =</span> <span class="dv">30</span></span>
-<span id="cb25-16"><a href=""></a>            )</span>
-<span id="cb25-17"><a href=""></a>        ),</span>
-<span id="cb25-18"><a href=""></a></span>
-<span id="cb25-19"><a href=""></a>        <span class="co"># Show a plot of the generated distribution</span></span>
-<span id="cb25-20"><a href=""></a>        <span class="fu">mainPanel</span>(</span>
-<span id="cb25-21"><a href=""></a>           <span class="fu">plotOutput</span>(<span class="st">"distPlot"</span>)</span>
-<span id="cb25-22"><a href=""></a>        )</span>
-<span id="cb25-23"><a href=""></a>    )</span>
-<span id="cb25-24"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="" aria-label="1"></a><span class="do">## User interface ----</span></span>
+<span id="cb25-2"><a href="" aria-label="2"></a></span>
+<span id="cb25-3"><a href="" aria-label="3"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb25-4"><a href="" aria-label="4"></a></span>
+<span id="cb25-5"><a href="" aria-label="5"></a>    <span class="co"># Application title</span></span>
+<span id="cb25-6"><a href="" aria-label="6"></a>    <span class="fu">titlePanel</span>(<span class="st">"Old Faithful Geyser Data"</span>),</span>
+<span id="cb25-7"><a href="" aria-label="7"></a></span>
+<span id="cb25-8"><a href="" aria-label="8"></a>    <span class="co"># Sidebar with a slider input for number of bins </span></span>
+<span id="cb25-9"><a href="" aria-label="9"></a>    <span class="fu">sidebarLayout</span>(</span>
+<span id="cb25-10"><a href="" aria-label="10"></a>        <span class="fu">sidebarPanel</span>(</span>
+<span id="cb25-11"><a href="" aria-label="11"></a>            <span class="fu">sliderInput</span>(<span class="st">"bins"</span>,</span>
+<span id="cb25-12"><a href="" aria-label="12"></a>                        <span class="st">"Number of bins:"</span>,</span>
+<span id="cb25-13"><a href="" aria-label="13"></a>                        <span class="at">min   =</span> <span class="dv">1</span>,</span>
+<span id="cb25-14"><a href="" aria-label="14"></a>                        <span class="at">max   =</span> <span class="dv">50</span>,</span>
+<span id="cb25-15"><a href="" aria-label="15"></a>                        <span class="at">value =</span> <span class="dv">30</span></span>
+<span id="cb25-16"><a href="" aria-label="16"></a>            )</span>
+<span id="cb25-17"><a href="" aria-label="17"></a>        ),</span>
+<span id="cb25-18"><a href="" aria-label="18"></a></span>
+<span id="cb25-19"><a href="" aria-label="19"></a>        <span class="co"># Show a plot of the generated distribution</span></span>
+<span id="cb25-20"><a href="" aria-label="20"></a>        <span class="fu">mainPanel</span>(</span>
+<span id="cb25-21"><a href="" aria-label="21"></a>           <span class="fu">plotOutput</span>(<span class="st">"distPlot"</span>)</span>
+<span id="cb25-22"><a href="" aria-label="22"></a>        )</span>
+<span id="cb25-23"><a href="" aria-label="23"></a>    )</span>
+<span id="cb25-24"><a href="" aria-label="24"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="do">## Server logic ----</span></span>
-<span id="cb26-2"><a href=""></a></span>
-<span id="cb26-3"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<span id="cb26-4"><a href=""></a></span>
-<span id="cb26-5"><a href=""></a>    output<span class="sc">$</span>distPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb26-6"><a href=""></a>      </span>
-<span id="cb26-7"><a href=""></a>        <span class="co"># Generate bins based on input$bins</span></span>
-<span id="cb26-8"><a href=""></a>        x    <span class="ot">&lt;-</span> faithful[, <span class="dv">2</span>]</span>
-<span id="cb26-9"><a href=""></a>        bins <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), <span class="at">length.out =</span> input<span class="sc">$</span>bins <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb26-10"><a href=""></a></span>
-<span id="cb26-11"><a href=""></a>        <span class="co"># Draw the histogram with the specified number of bins</span></span>
-<span id="cb26-12"><a href=""></a>        <span class="fu">hist</span>(x, <span class="at">breaks =</span> bins, <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">border =</span> <span class="st">'white'</span>,</span>
-<span id="cb26-13"><a href=""></a>             <span class="at">xlab =</span> <span class="st">'Waiting time to next eruption (in mins)'</span>,</span>
-<span id="cb26-14"><a href=""></a>             <span class="at">main =</span> <span class="st">'Histogram of waiting times'</span>)</span>
-<span id="cb26-15"><a href=""></a>    })</span>
-<span id="cb26-16"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="" aria-label="1"></a><span class="do">## Server logic ----</span></span>
+<span id="cb26-2"><a href="" aria-label="2"></a></span>
+<span id="cb26-3"><a href="" aria-label="3"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb26-4"><a href="" aria-label="4"></a></span>
+<span id="cb26-5"><a href="" aria-label="5"></a>    output<span class="sc">$</span>distPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb26-6"><a href="" aria-label="6"></a>      </span>
+<span id="cb26-7"><a href="" aria-label="7"></a>        <span class="co"># Generate bins based on input$bins</span></span>
+<span id="cb26-8"><a href="" aria-label="8"></a>        x    <span class="ot">&lt;-</span> faithful[, <span class="dv">2</span>]</span>
+<span id="cb26-9"><a href="" aria-label="9"></a>        bins <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), <span class="at">length.out =</span> input<span class="sc">$</span>bins <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb26-10"><a href="" aria-label="10"></a></span>
+<span id="cb26-11"><a href="" aria-label="11"></a>        <span class="co"># Draw the histogram with the specified number of bins</span></span>
+<span id="cb26-12"><a href="" aria-label="12"></a>        <span class="fu">hist</span>(x, <span class="at">breaks =</span> bins, <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">border =</span> <span class="st">'white'</span>,</span>
+<span id="cb26-13"><a href="" aria-label="13"></a>             <span class="at">xlab =</span> <span class="st">'Waiting time to next eruption (in mins)'</span>,</span>
+<span id="cb26-14"><a href="" aria-label="14"></a>             <span class="at">main =</span> <span class="st">'Histogram of waiting times'</span>)</span>
+<span id="cb26-15"><a href="" aria-label="15"></a>    })</span>
+<span id="cb26-16"><a href="" aria-label="16"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="do">## Create the application ----</span></span>
-<span id="cb27-2"><a href=""></a></span>
-<span id="cb27-3"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="" aria-label="1"></a><span class="do">## Create the application ----</span></span>
+<span id="cb27-2"><a href="" aria-label="2"></a></span>
+<span id="cb27-3"><a href="" aria-label="3"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 <p><br></p>
