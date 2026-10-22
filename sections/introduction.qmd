@@ -145,12 +145,13 @@ Perfect solutions to host projects (code) tracked by `git`
 
 **Services**
 
-- Full integration of version control (commits, history, differences)
-- Easy collaboration w/ branches, forks, pull requests
-- Issues tracking system
-- Enhanced documentation rendering (README, Wiki)
-- Static website hosting
+- Full integration of **version control** (commits, history, differences)
+- Easy **collaboration** w/ branches, forks, pull requests
+- **Issues** tracking system
+- Enhanced **documentation rendering** (README, Wiki)
+- Static **website hosting**
 - Automation & monitoring (CI/CD)
+- AI assitance
 :::
 
 :::{ .column .center width="40%"}
@@ -164,22 +165,32 @@ Perfect solutions to host projects (code) tracked by `git`
 
 ## Code hosting platforms
 
-**Main platforms**
+<br /><br />
 
 ::::{ .columns }
-:::{ .column width="50%" .center}
+:::{ .column width="33%" .center}
 ![](images/github-logo.png){width="25%"}
 <br>
 [**GitHub**](https://github.com/)
 <br>
-[_Microsoft_]{.small}
+[_Propriétaire (Microsoft)_<br>_USA_]{.small}
 :::
-:::{ .column width="50%" .center}
+
+
+:::{ .column width="33%" .center}
 ![](images/gitlab-logo.png){width="25%"}
 <br>
 [**GitLab**](https://gitlab.com/)
 <br>
-[_Open source_]{.small}
+[_Open source (MIT)_<br>_USA_]{.small}
+:::
+
+:::{ .column width="33%" .center}
+![](images/codeberg-logo.png){width="25%"}
+<br>
+[**Codeberg**](https://codeberg.org/)
+<br>
+[_Open source (GPL >= 3.0)_<br>_Germany_]{.small}
 :::
 ::::
 

@@ -271,7 +271,7 @@ Specify the **computational environment** that was used
 :::{.column width="60%"}
 A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
 
-- each research compendium should contain a `README`
+- each project should contain a `README`
 - you can write different `README` (project, data, etc.)
 :::
 :::{.column width="40%"}
@@ -287,7 +287,7 @@ A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduce
 :::{.column width="60%"}
 A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
 
-- each research compendium should contain a `README`
+- each project should contain a `README`
 - you can write different `README` (project, data, etc.)
 
 <br>
@@ -309,7 +309,7 @@ platforms recognize and interpret `README` written in [Markdown](https://docs.gi
 :::{.column width="60%"}
 A [`README`](https://en.wikipedia.org/wiki/README) is a text file that introduces and explains your project
 
-- each research compendium should contain a `README`
+- each project should contain a `README`
 - you can write different `README` (project, data, etc.)
 
 <br>

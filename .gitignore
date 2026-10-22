@@ -26,3 +26,5 @@ sections/*.html
 sections/*_files
 
 /.quarto/
+
+**/*.quarto_ipynb

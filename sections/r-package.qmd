@@ -35,7 +35,33 @@ As of today (`r Sys.Date()`):
 
 ## Recommended environment
 
-![](images/pkg-environment.png){width=65% fig-align='center'}
+<br/>
+
+:::: {.columns}
+
+::: {.column width=60%}
+![](images/pkg-environment.png){width=80% fig-align='left'}
+:::
+
+::: {.column width=18%}
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+- **A code formatter**
+
+Suggestion: [**`Air`**](https://posit-dev.github.io/air/)
+:::
+
+::: {.column width=4%}
+:::
+
+::: {.column width=18%}
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+- **A linter**
+
+Suggestion: [**`Jarl`**](https://jarl.etiennebacher.com/)
+:::
+::::
 
 
 ## Development workflow
